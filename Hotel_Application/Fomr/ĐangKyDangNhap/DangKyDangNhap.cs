@@ -12,7 +12,7 @@ namespace Hotel_Application
 {
     public partial class DangKyDangNhap : Form
     {
-        public Form formmisspass { get; set; } //
+       
         public DangKyDangNhap()
         {
             InitializeComponent();
@@ -22,13 +22,22 @@ namespace Hotel_Application
         {
             QuenMatKhau quenMatKhau = new QuenMatKhau();
             quenMatKhau.Location = this.Location;   
-            formmisspass = quenMatKhau;
+            
             quenMatKhau.FormClosing += delegate { this.Show(); };
             this.Hide();
             quenMatKhau.Show();
         }
 
-        
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(txtUsername.Text == "admin" && txtPassword.Text == "sa")
+            {
+                Admin ad = new Admin();
+
+                ad.FormClosing += delegate { this.Show(); };
+                this.Hide();
+                ad.Show();
+            }    
+        }
     }
 }

@@ -145,6 +145,8 @@
             this.Controls.Add(this.btnRoom);
             this.Controls.Add(this.phong1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Admin";
             this.Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
