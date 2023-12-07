@@ -46,16 +46,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DangKyDangNhap.cs">
+    <Compile Include="Fomr\Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangKyDangNhap.Designer.cs">
+    <Compile Include="Fomr\Admin\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomr\ĐangKyDangNhap\DangKyDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\ĐangKyDangNhap\DangKyDangNhap.Designer.cs">
       <DependentUpon>DangKyDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomr\NhanVien\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\NhanVien\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\Phong.Designer.cs">
+      <DependentUpon>Phong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DangKyDangNhap.resx">
+    <Compile Include="Fomr\ĐangKyDangNhap\QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\ĐangKyDangNhap\QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Fomr\Admin\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomr\ĐangKyDangNhap\DangKyDangNhap.resx">
       <DependentUpon>DangKyDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomr\NhanVien\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\Phong.resx">
+      <DependentUpon>Phong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fomr\ĐangKyDangNhap\QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,5 +118,6 @@
   <ItemGroup>
     <Content Include="QuanTriKhachSan.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

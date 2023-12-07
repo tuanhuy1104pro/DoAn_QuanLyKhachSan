@@ -1,0 +1,168 @@
+﻿namespace Hotel_Application
+{
+    partial class Admin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.phong1 = new Hotel_Application.Phong();
+            this.btnRoom = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnService = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnUINhanVien = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(338, 1151);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // phong1
+            // 
+            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.phong1.Location = new System.Drawing.Point(331, -6);
+            this.phong1.Name = "phong1";
+            this.phong1.Size = new System.Drawing.Size(1444, 1150);
+            this.phong1.TabIndex = 1;
+            // 
+            // btnRoom
+            // 
+            this.btnRoom.Location = new System.Drawing.Point(62, 218);
+            this.btnRoom.Name = "btnRoom";
+            this.btnRoom.Size = new System.Drawing.Size(180, 98);
+            this.btnRoom.TabIndex = 2;
+            this.btnRoom.Text = "Quản Lý Phòng";
+            this.btnRoom.UseVisualStyleBackColor = true;
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Location = new System.Drawing.Point(62, 394);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(180, 98);
+            this.btnNhanVien.TabIndex = 3;
+            this.btnNhanVien.Text = "Quản Lý Nhân Sự";
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // btnService
+            // 
+            this.btnService.Location = new System.Drawing.Point(62, 561);
+            this.btnService.Name = "btnService";
+            this.btnService.Size = new System.Drawing.Size(180, 98);
+            this.btnService.TabIndex = 4;
+            this.btnService.Text = "Quản Lý Dịch Vụ";
+            this.btnService.UseVisualStyleBackColor = true;
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.Location = new System.Drawing.Point(62, 723);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
+            this.btnHoaDon.TabIndex = 5;
+            this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
+            this.btnHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(62, 54);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(180, 98);
+            this.btnHome.TabIndex = 6;
+            this.btnHome.Text = "Trang Chủ";
+            this.btnHome.UseVisualStyleBackColor = true;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Location = new System.Drawing.Point(62, 888);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(180, 98);
+            this.btnThongKe.TabIndex = 7;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(185, 1047);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(145, 98);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Đăng Xuất";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            // 
+            // btnUINhanVien
+            // 
+            this.btnUINhanVien.Location = new System.Drawing.Point(-2, 1046);
+            this.btnUINhanVien.Name = "btnUINhanVien";
+            this.btnUINhanVien.Size = new System.Drawing.Size(145, 98);
+            this.btnUINhanVien.TabIndex = 9;
+            this.btnUINhanVien.Text = "Giao Diện Nhân Viên";
+            this.btnUINhanVien.UseVisualStyleBackColor = true;
+            // 
+            // Admin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1778, 1144);
+            this.Controls.Add(this.btnUINhanVien);
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.btnThongKe);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnHoaDon);
+            this.Controls.Add(this.btnService);
+            this.Controls.Add(this.btnNhanVien);
+            this.Controls.Add(this.btnRoom);
+            this.Controls.Add(this.phong1);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "Admin";
+            this.Text = "Admin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Phong phong1;
+        private System.Windows.Forms.Button btnRoom;
+        private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.Button btnService;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnUINhanVien;
+    }
+}
