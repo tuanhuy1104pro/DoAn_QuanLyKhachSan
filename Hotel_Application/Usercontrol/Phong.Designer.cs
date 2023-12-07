@@ -150,7 +150,7 @@
             // btnSuaPhong
             // 
             this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaPhong.Location = new System.Drawing.Point(1309, 1041);
+            this.btnSuaPhong.Location = new System.Drawing.Point(1312, 1040);
             this.btnSuaPhong.Name = "btnSuaPhong";
             this.btnSuaPhong.Size = new System.Drawing.Size(137, 63);
             this.btnSuaPhong.TabIndex = 19;
@@ -160,7 +160,7 @@
             // btnXoaPhong
             // 
             this.btnXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaPhong.Location = new System.Drawing.Point(1309, 935);
+            this.btnXoaPhong.Location = new System.Drawing.Point(1312, 940);
             this.btnXoaPhong.Name = "btnXoaPhong";
             this.btnXoaPhong.Size = new System.Drawing.Size(137, 63);
             this.btnXoaPhong.TabIndex = 18;

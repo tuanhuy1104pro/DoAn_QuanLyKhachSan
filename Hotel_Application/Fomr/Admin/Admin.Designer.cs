@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.phong1 = new Hotel_Application.Phong();
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUINhanVien = new System.Windows.Forms.Button();
+            this.trangChu1 = new Hotel_Application.TrangChu();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,14 +49,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(338, 1151);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // phong1
-            // 
-            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.phong1.Location = new System.Drawing.Point(331, -6);
-            this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1444, 1150);
-            this.phong1.TabIndex = 1;
             // 
             // btnRoom
             // 
@@ -130,11 +122,22 @@
             this.btnUINhanVien.Text = "Giao Diện Nhân Viên";
             this.btnUINhanVien.UseVisualStyleBackColor = true;
             // 
+            // trangChu1
+            // 
+            this.trangChu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.trangChu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trangChu1.Location = new System.Drawing.Point(333, -6);
+            this.trangChu1.Margin = new System.Windows.Forms.Padding(0);
+            this.trangChu1.Name = "trangChu1";
+            this.trangChu1.Size = new System.Drawing.Size(1460, 1200);
+            this.trangChu1.TabIndex = 10;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 1144);
+            this.Controls.Add(this.trangChu1);
             this.Controls.Add(this.btnUINhanVien);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
@@ -143,9 +146,7 @@
             this.Controls.Add(this.btnService);
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnRoom);
-            this.Controls.Add(this.phong1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Admin";
             this.Text = "Admin";
@@ -157,7 +158,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Phong phong1;
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnService;
@@ -166,5 +166,6 @@
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUINhanVien;
+        private TrangChu trangChu1;
     }
 }
