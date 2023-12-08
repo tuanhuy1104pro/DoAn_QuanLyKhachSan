@@ -173,9 +173,6 @@
             // 
             this.cboLoaiService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLoaiService.FormattingEnabled = true;
-            this.cboLoaiService.Items.AddRange(new object[] {
-            "êf",
-            "êf"});
             this.cboLoaiService.Location = new System.Drawing.Point(45, 183);
             this.cboLoaiService.Name = "cboLoaiService";
             this.cboLoaiService.Size = new System.Drawing.Size(181, 37);

@@ -18,6 +18,8 @@ namespace Hotel_Application
             InitializeComponent();
             btnHome.BackColor = Color.Gray;
             btnHome.ForeColor = Color.White;
+            
+           
         }
       
        

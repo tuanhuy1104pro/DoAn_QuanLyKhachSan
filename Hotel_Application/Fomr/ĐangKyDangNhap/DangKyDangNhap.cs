@@ -36,6 +36,7 @@ namespace Hotel_Application
 
                 ad.FormClosing += delegate { this.Show(); };
                 this.Hide();
+               
                 ad.Show();
             }    
         }
