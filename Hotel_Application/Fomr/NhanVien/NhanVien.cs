@@ -60,6 +60,8 @@ namespace Hotel_Application
             btnHome.BackColor = Color.Gray;
             btnHome.ForeColor = Color.White;
             //UI Feature Button
+            trangChu1.Show();
+            trangChu1.BringToFront();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)

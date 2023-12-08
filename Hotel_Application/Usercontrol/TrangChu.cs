@@ -101,8 +101,9 @@ namespace Hotel_Application
             //Luong
             select = $"Select * From Luong Where MaNV = '{doituongNV.MaNV}'";
             cmd = new SqlCommand (select, conn);
-            dr = cmd.ExecuteReader();
-            bool flag = dr.Read();
+            SqlDataReader dr2 = cmd.ExecuteReader();
+           
+            bool flag = dr2.Read();
             
             if(flag == false)
             {
@@ -111,12 +112,12 @@ namespace Hotel_Application
             else
             {
                 doituongLuong.MaNV = Convert.ToInt32(doituongNV.MaNV.ToString());
-                doituongLuong.TienLuong = double.Parse(dr["TienLuong"].ToString());
-                doituongLuong.SoNgayNghi = Convert.ToInt32(dr["SoNgayNghi"].ToString());
+                doituongLuong.TienLuong = double.Parse(dr2["TienLuong"].ToString());
+                doituongLuong.SoNgayNghi = Convert.ToInt32(dr2["SoNgayNghi"].ToString());
             }
             txtLuongCoBan.Text = doituongLuong.TienLuong.ToString();
             txtSoNgayNghi.Text = doituongLuong.SoNgayNghi.ToString();
-            dr.Close();
+            dr2.Close();
             conn.Close();
         }
 
