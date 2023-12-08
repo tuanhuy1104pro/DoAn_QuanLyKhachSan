@@ -54,6 +54,10 @@ namespace Hotel_Application
             //
             LoadThongTinCongViec();
             cboTenChucVu.Enabled =  false;
+            txtLuongCoBan.Enabled = false;
+            txtSoNgayNghi.Enabled = false;
+            txtPhuCap.Enabled = false;
+            DtNgayVaoLam.Enabled = false;
             //
             
         }
@@ -87,12 +91,101 @@ namespace Hotel_Application
                 conn.Open();
             }
             string select = $"Select * From ChucVu Where MaCV = '{doituongNV.MaCV}'";
-            SqlCommand cmd = new SqlCommand(select, conn);
+            cmd = new SqlCommand(select, conn);
             SqlDataReader dr = cmd.ExecuteReader();
             dr.Read();
             cboTenChucVu.SelectedText = dr["TenCV"].ToString();
             txtPhuCap.Text = dr["PhuCap"].ToString();
+            DtNgayVaoLam.Text = doituongNV.NgayVaoLam.ToString();
+            dr.Close();
+            //Luong
+            select = $"Select * From Luong Where MaNV = '{doituongNV.MaNV}'";
+            cmd = new SqlCommand (select, conn);
+            dr = cmd.ExecuteReader();
+            bool flag = dr.Read();
+            
+            if(flag == false)
+            {
+                doituongLuong.MaNV = Convert.ToInt32(doituongNV.MaNV.ToString());
+            }
+            else
+            {
+                doituongLuong.MaNV = Convert.ToInt32(doituongNV.MaNV.ToString());
+                doituongLuong.TienLuong = double.Parse(dr["TienLuong"].ToString());
+                doituongLuong.SoNgayNghi = Convert.ToInt32(dr["SoNgayNghi"].ToString());
+            }
+            txtLuongCoBan.Text = doituongLuong.TienLuong.ToString();
+            txtSoNgayNghi.Text = doituongLuong.SoNgayNghi.ToString();
+            dr.Close();
+            conn.Close();
+        }
 
+
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            EditProfile();
+        }
+
+        public void EditProfile()
+        {
+            //Open
+            txtHoTen.Enabled = true;
+            txtSdt.Enabled = true;
+            txtEmail.Enabled = true;
+            dtDoBorn.Enabled = true;
+            cboGioiTinh.Enabled = true;
+            btnXacNhan.Visible = true;
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string updatename;
+            string updatesdt;
+            string updateemail;
+            string updateNgaysinh;
+            string updategioitinh;
+            //
+            updatename = $"Update NhanVien\nSet TenNV = N'{txtHoTen.Text}' where MaNV = '{doituongNV.MaNV}'";
+            updatesdt = $"Update NhanVien\nSet SDT = '{txtSdt.Text}' where MaNV = '{doituongNV.MaNV}'";
+            updateemail = $"Update NhanVien\nSet EmailNV = '{txtEmail.Text}' where MaNV = '{doituongNV.MaNV}'";
+            updateNgaysinh = $"Update NhanVien\nSet NgaySinh = '{dtDoBorn.Text}' where MaNV = '{doituongNV.MaNV}'";
+            updategioitinh = $"Update NhanVien\nSet GioiTinh = '{cboGioiTinh.SelectedItem}' where MaNV = '{doituongNV.MaNV}'";
+
+            cmd = new SqlCommand(updatename, conn);
+            cmd.ExecuteNonQuery();
+
+            int flag = 0;
+            if (txtSdt.Text.Length <= 10)
+            {
+                cmd = new SqlCommand(updatesdt, conn);
+                cmd.ExecuteNonQuery();
+                flag = 1;
+            }
+            
+            cmd = new SqlCommand(updateemail, conn);
+            cmd.ExecuteNonQuery();
+            cmd = new SqlCommand(updateNgaysinh, conn);
+            cmd.ExecuteNonQuery();
+            cmd = new SqlCommand(updategioitinh, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            if(flag == 1)
+            {
+                MessageBox.Show("Đã Thay Đổi Thông Tin Thành Công");
+            }
+            else
+            {
+                MessageBox.Show("Số Điện thoại phải từ 9 số trở xuống");
+            }
+            
+            txtHoTen.Enabled = false;
+            txtSdt.Enabled = false;
+            txtEmail.Enabled = false;
+            dtDoBorn.Enabled = false;
+            cboGioiTinh.Enabled = false;
+            btnXacNhan.Visible=false;
         }
     }
 }

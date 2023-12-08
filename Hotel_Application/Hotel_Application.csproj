@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Class\ChucVuClass.cs" />
+    <Compile Include="Features\Class\LuongClass.cs" />
     <Compile Include="Features\Class\NhanVienClass.cs" />
     <Compile Include="Features\ConnectDB.cs" />
     <Compile Include="Fomr\Admin\Admin.cs">

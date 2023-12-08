@@ -52,6 +52,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnXacNhan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptThumbnail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.btnEditProfile.TabIndex = 28;
             this.btnEditProfile.Text = "Sửa";
             this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // label4
             // 
@@ -179,6 +181,7 @@
             // dtDoBorn
             // 
             this.dtDoBorn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDoBorn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDoBorn.Location = new System.Drawing.Point(417, 337);
             this.dtDoBorn.Margin = new System.Windows.Forms.Padding(0);
             this.dtDoBorn.Name = "dtDoBorn";
@@ -267,6 +270,7 @@
             // DtNgayVaoLam
             // 
             this.DtNgayVaoLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtNgayVaoLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtNgayVaoLam.Location = new System.Drawing.Point(172, 654);
             this.DtNgayVaoLam.Margin = new System.Windows.Forms.Padding(2);
             this.DtNgayVaoLam.Name = "DtNgayVaoLam";
@@ -315,11 +319,25 @@
             this.label12.TabIndex = 48;
             this.label12.Text = "LCB";
             // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Location = new System.Drawing.Point(455, 402);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(0);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(153, 64);
+            this.btnXacNhan.TabIndex = 50;
+            this.btnXacNhan.Text = "Xác Nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Visible = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.txtLuongCoBan);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtSoNgayNghi);
@@ -380,5 +398,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtLuongCoBan;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnXacNhan;
     }
 }

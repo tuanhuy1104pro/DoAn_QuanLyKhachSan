@@ -203,7 +203,7 @@ SELECT * FROM ChiTietHoaDon
 DELETE ChiTietHoaDon
 
 
-select *from ChucVu
+
 
 --Lê Đức Tú
 -- Ràng buộc dữ liệu - Mặc định khuyến mãi là 0%.
