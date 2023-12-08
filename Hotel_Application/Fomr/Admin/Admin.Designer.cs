@@ -37,7 +37,7 @@
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUINhanVien = new System.Windows.Forms.Button();
-            this.trangChu1 = new Hotel_Application.TrangChu();
+            this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.btnRoom.TabIndex = 2;
             this.btnRoom.Text = "Quản Lý Phòng";
             this.btnRoom.UseVisualStyleBackColor = true;
+            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
             // 
             // btnNhanVien
             // 
@@ -67,6 +68,7 @@
             this.btnNhanVien.TabIndex = 3;
             this.btnNhanVien.Text = "Quản Lý Nhân Sự";
             this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnService
             // 
@@ -76,6 +78,7 @@
             this.btnService.TabIndex = 4;
             this.btnService.Text = "Quản Lý Dịch Vụ";
             this.btnService.UseVisualStyleBackColor = true;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // btnHoaDon
             // 
@@ -85,6 +88,7 @@
             this.btnHoaDon.TabIndex = 5;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnHome
             // 
@@ -94,6 +98,7 @@
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Trang Chủ";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnThongKe
             // 
@@ -103,6 +108,7 @@
             this.btnThongKe.TabIndex = 7;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnLogOut
             // 
@@ -122,22 +128,20 @@
             this.btnUINhanVien.Text = "Giao Diện Nhân Viên";
             this.btnUINhanVien.UseVisualStyleBackColor = true;
             // 
-            // trangChu1
+            // quanLyDichVu1
             // 
-            this.trangChu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.trangChu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trangChu1.Location = new System.Drawing.Point(333, -6);
-            this.trangChu1.Margin = new System.Windows.Forms.Padding(0);
-            this.trangChu1.Name = "trangChu1";
-            this.trangChu1.Size = new System.Drawing.Size(1460, 1200);
-            this.trangChu1.TabIndex = 10;
+            this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quanLyDichVu1.Location = new System.Drawing.Point(336, -6);
+            this.quanLyDichVu1.Name = "quanLyDichVu1";
+            this.quanLyDichVu1.Size = new System.Drawing.Size(1440, 1200);
+            this.quanLyDichVu1.TabIndex = 10;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 1144);
-            this.Controls.Add(this.trangChu1);
+            this.Controls.Add(this.quanLyDichVu1);
             this.Controls.Add(this.btnUINhanVien);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
@@ -166,6 +170,6 @@
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUINhanVien;
-        private TrangChu trangChu1;
+        private Usercontrol.QuanLyDichVu quanLyDichVu1;
     }
 }
