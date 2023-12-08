@@ -161,10 +161,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QuanTriKhachSan.sql" />
+    <Folder Include="Features\Class\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Class\" />
+    <Content Include="QuanTriKhachSan.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

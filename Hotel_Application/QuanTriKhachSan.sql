@@ -18,7 +18,8 @@ create table NhanVien
 	GioiTinh nvarchar(50) not null,
 	TaiKhoan varchar(150) not null,
 	MatKhau varchar(150) not null,
-	TuoiNV tinyint check(TuoiNV >= 18 and TuoiNV <= 60) not null,
+	NgaySinh datetime check (Year(now) - Year(NgaySinh) >= 18 and Year(now) - Year(NgaySinh) <= 60) not null,
+	--TuoiNV tinyint check(TuoiNV >= 18 and TuoiNV <= 60) not null,
 	NgayVaoLam datetime not null,
 	MaCV int foreign key references ChucVu,
 	constraint PK_NhanVien primary key (MaNV)
@@ -77,22 +78,22 @@ create table ChiTietGoi
 Create table KhachHang
 (
 	MaKhachHang int identity(1,1) primary key,
-	HoTen nvarchar(50),
+	HoTen nvarchar(50), --
 	DiaChi nvarchar(50),
-	SoDienThoai varchar(30),
-	Email varchar(50) not null,
+	SoDienThoai varchar(30),--
+	Email varchar(50) not null,--
 	TaiKhoan varchar(50) not null,
 	MatKhau varchar(50) not null
 )--Bắt buộc phải có Email, họ tên - địa chỉ
 create table HoaDon
 (
 	MaHoaDon int identity(1,1),
-	NgayThue datetime,
-	NgayTra datetime,
-	TongTien float null,
-	MaNV int foreign key references NhanVien,
-	MaKhachHang int foreign key references KhachHang,
-	MaPhong int foreign key references Phong,
+	NgayThue datetime,--
+	NgayTra datetime,--
+	TongTien float null, --
+	MaNV int foreign key references NhanVien, -- 
+	MaKhachHang int foreign key references KhachHang,--
+	MaPhong int foreign key references Phong,--
 	constraint PK_HD primary key (MaHoaDon)
 )
 -- Ma phong chi duoc them khi Ngay thue ngay tra cua nhung hoa don khac da het han: vd ngay tra 22/11/2023 maphong 2 thi neu tao hoadon thi hoa don do phai co ngay thue > ngay tra cua nhung hoa don khac co ma la 2. gan nhat 1 tuan  
@@ -168,7 +169,8 @@ INSERT INTO ChucVu VALUES (N'Nhân viên',2.5),
 SELECT * FROM ChucVu
 
 DBCC CHECKIDENT('NhanVien', RESEED, 0)
-INSERT INTO  NhanVien VALUES(N'Nguyễn Văn An',0816243565,'An@gmail.com','Nam','An123','An123',19,10/10/2023,1),
+INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa',19,10/10/2023,1),
+					(N'Nguyễn Văn An',0816243565,'An@gmail.com','Nam','An123','An123',19,10/10/2023,1),
 					  (N'Nguyễn Thành Lợi',0819062565,'Loi@gmail.com','Nam','Loi123','Loi123',39,10/10/2015,2),
 					   (N'Lê Thị Bích',0866223565,'Bich@gmail.com',N'Nữ','Bich123','Bich123',59,10/10/2000,3),
 SELECT * FROM NhanVien
