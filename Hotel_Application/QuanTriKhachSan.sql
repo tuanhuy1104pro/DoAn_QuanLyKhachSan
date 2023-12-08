@@ -202,6 +202,10 @@ SELECT * FROM ChiTietHoaDon
 DELETE ChiTietHoaDon
 
 
+select *from NhanVien
+
+select *  from NhanVien
+where TaiKhoan = 'Admin' and MatKhau = 'sa'
 
 --Lê Đức Tú
 -- Ràng buộc dữ liệu - Mặc định khuyến mãi là 0%.

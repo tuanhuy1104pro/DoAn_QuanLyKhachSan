@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Class\NhanVienClass.cs" />
+    <Compile Include="Features\ConnectDB.cs" />
     <Compile Include="Fomr\Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +162,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="QuanTriKhachSan.sql" />
   </ItemGroup>

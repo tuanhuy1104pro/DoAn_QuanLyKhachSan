@@ -36,7 +36,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.llbFindPass = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.theme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,26 +119,11 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // llbFindPass
-            // 
-            this.llbFindPass.AutoSize = true;
-            this.llbFindPass.BackColor = System.Drawing.Color.Transparent;
-            this.llbFindPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbFindPass.ForeColor = System.Drawing.Color.Transparent;
-            this.llbFindPass.Location = new System.Drawing.Point(1108, 684);
-            this.llbFindPass.Name = "llbFindPass";
-            this.llbFindPass.Size = new System.Drawing.Size(151, 25);
-            this.llbFindPass.TabIndex = 8;
-            this.llbFindPass.TabStop = true;
-            this.llbFindPass.Text = "Quên Mật Khẩu";
-            this.llbFindPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbFindPass_LinkClicked);
-            // 
             // DangKyDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 1144);
-            this.Controls.Add(this.llbFindPass);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -169,6 +153,5 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel llbFindPass;
     }
 }
