@@ -1,5 +1,4 @@
-﻿use master
-create database QLKS
+﻿create database QLKS
 use QLKS
 go 
 --Nhân Viên - Lương - Chức Vụ
@@ -9,6 +8,8 @@ create table ChucVu
 	TenCV nvarchar(25) not null,
 	PhuCap float default null
 );
+alter table ChucVu
+add constraint Unique_TenCV unique(TenCV)
 create table NhanVien
 (
 	MaNV int identity(1,1) not null,
@@ -18,12 +19,15 @@ create table NhanVien
 	GioiTinh nvarchar(50) not null,
 	TaiKhoan varchar(150) not null,
 	MatKhau varchar(150) not null,
-	NgaySinh datetime check (Year(now) - Year(NgaySinh) >= 18 and Year(now) - Year(NgaySinh) <= 60) not null,
+	NgaySinh datetime check (Year(GETDATE()) - Year(NgaySinh) >= 18) not null,
 	--TuoiNV tinyint check(TuoiNV >= 18 and TuoiNV <= 60) not null,
 	NgayVaoLam datetime not null,
 	MaCV int foreign key references ChucVu,
 	constraint PK_NhanVien primary key (MaNV)
 )
+
+alter table NhanVien
+add constraint Unique_SDT unique(SDT)
 
 create table Luong
 (
@@ -40,7 +44,7 @@ create table LoaiPhong
 create table Phong
 (
 	MaPhong int identity(1,1) primary key,
-	TenPhong varchar(50),
+	TenPhong varchar(50) unique,
 	MaLoaiPhong int foreign key references LoaiPhong,
 )
 -- Tên phòng - 3 loại phòng : Phòng đơn : Tên phòng sẽ bắt đầu bằng chữ D - Phòng Đôi là C - Phòng Vip: V
@@ -80,9 +84,9 @@ Create table KhachHang
 	MaKhachHang int identity(1,1) primary key,
 	HoTen nvarchar(50), --
 	DiaChi nvarchar(50),
-	SoDienThoai varchar(30),--
+	SoDienThoai varchar(30) unique,--
 	Email varchar(50) not null,--
-	TaiKhoan varchar(50) not null,
+	TaiKhoan varchar(50) unique not null,
 	MatKhau varchar(50) not null
 )--Bắt buộc phải có Email, họ tên - địa chỉ
 create table HoaDon
@@ -107,7 +111,7 @@ Create table ChiTietHoaDon
 )
 
 go
-DBCC CHECKIDENT('LoaiDichVu', RESEED,0)
+DBCC CHECKIDENT('LoaiDichVu', RESEED,1)
 INSERT INTO LoaiDichVu VALUES(N'Đồ Ăn'),
 							(N'	Masage'),
 							(N'Bạn cùng phòng'),
@@ -121,7 +125,7 @@ DBCC CHECKIDENT('LoaiDichVu', RESEED,2)
 INSERT INTO LoaiDichVu VALUES(N'Tham quan')
 --
 
-DBCC CHECKIDENT('DichVu', RESEED, 0)
+DBCC CHECKIDENT('DichVu', RESEED, 1)
 INSERT INTO DichVu (TenDichVu,GiaTien,MaLoaiDichVu)  VALUES(N'Dọn dẹp',50,1),
 						(N'Tổ chức tiệc và dọn dẹp',100,2),
 						(N'Nấu ăn tổ chức tiệc và dọn dẹp',200,3)
@@ -169,10 +173,11 @@ INSERT INTO ChucVu VALUES (N'Nhân viên',2.5),
 SELECT * FROM ChucVu
 
 DBCC CHECKIDENT('NhanVien', RESEED, 0)
-INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa',19,10/10/2023,1),
-					(N'Nguyễn Văn An',0816243565,'An@gmail.com','Nam','An123','An123',19,10/10/2023,1),
-					  (N'Nguyễn Thành Lợi',0819062565,'Loi@gmail.com','Nam','Loi123','Loi123',39,10/10/2015,2),
-					   (N'Lê Thị Bích',0866223565,'Bich@gmail.com',N'Nữ','Bich123','Bich123',59,10/10/2000,3),
+set dateformat dmy
+INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa',11/4/2003,10/10/2023,1),
+					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123',5/3/1999,10/10/2023,1),
+					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123',5/3/1999,10/10/2015,2),
+					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123',5/3/1999,10/10/2000,3)
 SELECT * FROM NhanVien
 Delete from NhanVien
 
