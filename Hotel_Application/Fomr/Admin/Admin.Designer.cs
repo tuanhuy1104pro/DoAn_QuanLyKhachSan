@@ -127,6 +127,7 @@
             this.btnUINhanVien.TabIndex = 9;
             this.btnUINhanVien.Text = "Giao Diện Nhân Viên";
             this.btnUINhanVien.UseVisualStyleBackColor = true;
+            this.btnUINhanVien.Click += new System.EventHandler(this.btnUINhanVien_Click);
             // 
             // quanLyHoaDon1
             // 

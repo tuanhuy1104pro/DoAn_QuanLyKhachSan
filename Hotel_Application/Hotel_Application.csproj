@@ -64,6 +64,12 @@
     <Compile Include="Fomr\NhanVien\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.Designer.cs">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrol\QuanLyHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <EmbeddedResource Include="Fomr\NhanVien\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.resx">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\QuanLyHoaDon.resx">
       <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +163,8 @@
   <ItemGroup>
     <Content Include="QuanTriKhachSan.sql" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Class\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

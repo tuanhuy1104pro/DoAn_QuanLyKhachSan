@@ -138,5 +138,15 @@ namespace Hotel_Application
             btnThongKe.ForeColor = Color.White;
             //UI Feature Button
         }
+
+        private void btnUINhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVien fomrNhanVien = new NhanVien();
+            fomrNhanVien.Location = this.Location;
+           fomrNhanVien.FormClosing += delegate { this.Close(); };
+            this.Hide();
+            fomrNhanVien.Show();
+            
+        }
     }
 }

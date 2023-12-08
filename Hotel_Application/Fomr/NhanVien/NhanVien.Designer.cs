@@ -32,8 +32,9 @@
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
-            this.phong1 = new Hotel_Application.Phong();
             this.btnDangKyHoaDon = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.taoHoaDon1 = new Hotel_Application.TaoHoaDon();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -47,7 +48,7 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(33, 595);
+            this.btnThongKe.Location = new System.Drawing.Point(52, 740);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(180, 98);
             this.btnThongKe.TabIndex = 12;
@@ -56,7 +57,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(33, 57);
+            this.btnHome.Location = new System.Drawing.Point(52, 53);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(180, 98);
             this.btnHome.TabIndex = 11;
@@ -65,41 +66,52 @@
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Location = new System.Drawing.Point(33, 207);
+            this.btnHoaDon.Location = new System.Drawing.Point(52, 206);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnHoaDon.TabIndex = 10;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
             // 
-            // phong1
-            // 
-            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.phong1.Location = new System.Drawing.Point(302, -3);
-            this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1444, 1150);
-            this.phong1.TabIndex = 9;
-            // 
             // btnDangKyHoaDon
             // 
-            this.btnDangKyHoaDon.Location = new System.Drawing.Point(33, 398);
+            this.btnDangKyHoaDon.Location = new System.Drawing.Point(52, 387);
             this.btnDangKyHoaDon.Name = "btnDangKyHoaDon";
             this.btnDangKyHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnDangKyHoaDon.TabIndex = 14;
             this.btnDangKyHoaDon.Text = "Đăng Ký Hóa Đơn";
             this.btnDangKyHoaDon.UseVisualStyleBackColor = true;
+            this.btnDangKyHoaDon.Click += new System.EventHandler(this.btnDangKyHoaDon_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(52, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 98);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Thêm Dịch Vụ Vào Hóa Đơn";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // taoHoaDon1
+            // 
+            this.taoHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.taoHoaDon1.Location = new System.Drawing.Point(307, 1);
+            this.taoHoaDon1.Name = "taoHoaDon1";
+            this.taoHoaDon1.Size = new System.Drawing.Size(1450, 1147);
+            this.taoHoaDon1.TabIndex = 15;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1742, 1144);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.taoHoaDon1);
             this.Controls.Add(this.btnDangKyHoaDon);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnHoaDon);
-            this.Controls.Add(this.phong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "NhanVien";
@@ -114,7 +126,8 @@
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnHoaDon;
-        private Phong phong1;
         private System.Windows.Forms.Button btnDangKyHoaDon;
+        private System.Windows.Forms.Button button1;
+        private TaoHoaDon taoHoaDon1;
     }
 }

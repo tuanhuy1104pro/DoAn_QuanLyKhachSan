@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_Application
 {
-    public partial class NhanVien : Form
+    public partial class TaoHoaDon : UserControl
     {
-        public NhanVien()
+        public TaoHoaDon()
         {
             InitializeComponent();
-        }
-
-        private void btnDangKyHoaDon_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
