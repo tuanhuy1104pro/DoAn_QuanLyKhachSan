@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSuaPhong = new System.Windows.Forms.Button();
+            this.btnEditProfile = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.ptThumbnail = new System.Windows.Forms.PictureBox();
             this.txtSdt = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
+            this.dtDoBorn = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtPhuCap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DtNgayVaoLam = new System.Windows.Forms.DateTimePicker();
             this.txtSoNgayNghi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
@@ -55,16 +55,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptThumbnail)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSuaPhong
+            // btnEditProfile
             // 
-            this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaPhong.Location = new System.Drawing.Point(284, 402);
-            this.btnSuaPhong.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSuaPhong.Name = "btnSuaPhong";
-            this.btnSuaPhong.Size = new System.Drawing.Size(133, 64);
-            this.btnSuaPhong.TabIndex = 28;
-            this.btnSuaPhong.Text = "Sửa";
-            this.btnSuaPhong.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProfile.Location = new System.Drawing.Point(284, 402);
+            this.btnEditProfile.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(133, 64);
+            this.btnEditProfile.TabIndex = 28;
+            this.btnEditProfile.Text = "Sửa";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -130,14 +130,14 @@
             this.txtSdt.Size = new System.Drawing.Size(540, 39);
             this.txtSdt.TabIndex = 31;
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(417, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(540, 39);
-            this.textBox1.TabIndex = 33;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(417, 207);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(540, 39);
+            this.txtEmail.TabIndex = 33;
             // 
             // label1
             // 
@@ -163,24 +163,27 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Giới Tính";
             // 
-            // comboBox1
+            // cboGioiTinh
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(417, 268);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 40);
-            this.comboBox1.TabIndex = 35;
+            this.cboGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGioiTinh.FormattingEnabled = true;
+            this.cboGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cboGioiTinh.Location = new System.Drawing.Point(417, 268);
+            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(0);
+            this.cboGioiTinh.Name = "cboGioiTinh";
+            this.cboGioiTinh.Size = new System.Drawing.Size(126, 40);
+            this.cboGioiTinh.TabIndex = 35;
             // 
-            // dateTimePicker1
+            // dtDoBorn
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(417, 337);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(540, 39);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dtDoBorn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDoBorn.Location = new System.Drawing.Point(417, 337);
+            this.dtDoBorn.Margin = new System.Windows.Forms.Padding(0);
+            this.dtDoBorn.Name = "dtDoBorn";
+            this.dtDoBorn.Size = new System.Drawing.Size(540, 39);
+            this.dtDoBorn.TabIndex = 36;
             // 
             // label3
             // 
@@ -261,14 +264,14 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Ngày Vào Làm";
             // 
-            // dateTimePicker2
+            // DtNgayVaoLam
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 654);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(477, 39);
-            this.dateTimePicker2.TabIndex = 45;
+            this.DtNgayVaoLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtNgayVaoLam.Location = new System.Drawing.Point(172, 654);
+            this.DtNgayVaoLam.Margin = new System.Windows.Forms.Padding(2);
+            this.DtNgayVaoLam.Name = "DtNgayVaoLam";
+            this.DtNgayVaoLam.Size = new System.Drawing.Size(477, 39);
+            this.DtNgayVaoLam.TabIndex = 45;
             // 
             // txtSoNgayNghi
             // 
@@ -321,7 +324,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtSoNgayNghi);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.DtNgayVaoLam);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPhuCap);
             this.Controls.Add(this.label9);
@@ -329,14 +332,14 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dtDoBorn);
+            this.Controls.Add(this.cboGioiTinh);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.ptThumbnail);
-            this.Controls.Add(this.btnSuaPhong);
+            this.Controls.Add(this.btnEditProfile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -345,6 +348,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TrangChu";
             this.Size = new System.Drawing.Size(1460, 1200);
+            this.Load += new System.EventHandler(this.TrangChu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptThumbnail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,18 +356,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSuaPhong;
+        private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.PictureBox ptThumbnail;
         private System.Windows.Forms.TextBox txtSdt;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cboGioiTinh;
+        private System.Windows.Forms.DateTimePicker dtDoBorn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -371,7 +375,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPhuCap;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DtNgayVaoLam;
         private System.Windows.Forms.TextBox txtSoNgayNghi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtLuongCoBan;

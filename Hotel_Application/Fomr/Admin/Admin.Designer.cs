@@ -33,7 +33,6 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUINhanVien = new System.Windows.Forms.Button();
@@ -52,7 +51,7 @@
             // 
             // btnRoom
             // 
-            this.btnRoom.Location = new System.Drawing.Point(77, 215);
+            this.btnRoom.Location = new System.Drawing.Point(77, 86);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Size = new System.Drawing.Size(180, 98);
             this.btnRoom.TabIndex = 2;
@@ -62,7 +61,7 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Location = new System.Drawing.Point(77, 371);
+            this.btnNhanVien.Location = new System.Drawing.Point(77, 272);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(180, 98);
             this.btnNhanVien.TabIndex = 3;
@@ -72,7 +71,7 @@
             // 
             // btnService
             // 
-            this.btnService.Location = new System.Drawing.Point(77, 528);
+            this.btnService.Location = new System.Drawing.Point(77, 474);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(180, 98);
             this.btnService.TabIndex = 4;
@@ -82,23 +81,13 @@
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Location = new System.Drawing.Point(77, 696);
+            this.btnHoaDon.Location = new System.Drawing.Point(77, 664);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnHoaDon.TabIndex = 5;
             this.btnHoaDon.Text = "Quản Lý Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Location = new System.Drawing.Point(77, 55);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(180, 98);
-            this.btnHome.TabIndex = 6;
-            this.btnHome.Text = "Trang Chủ";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnThongKe
             // 
@@ -146,7 +135,6 @@
             this.Controls.Add(this.btnUINhanVien);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
-            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.btnService);
             this.Controls.Add(this.btnNhanVien);
@@ -170,7 +158,6 @@
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUINhanVien;
-        public System.Windows.Forms.Button btnHome;
         private QuanLyHoaDon quanLyHoaDon1;
     }
 }

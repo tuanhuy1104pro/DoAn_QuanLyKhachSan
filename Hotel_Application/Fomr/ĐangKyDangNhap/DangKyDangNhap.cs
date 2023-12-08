@@ -14,12 +14,14 @@ namespace Hotel_Application
 {
     public partial class DangKyDangNhap : Form
     {
-       public NhanVienClass DoiTuongNV = new NhanVienClass();
+       
+       public static NhanVienClass DoiTuongNV = new NhanVienClass();
        SqlConnection conn = ConnectDB.connectstring;
        SqlCommand cmd;
         public DangKyDangNhap()
         {
             InitializeComponent();
+            
         }
 
         private void llbFindPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

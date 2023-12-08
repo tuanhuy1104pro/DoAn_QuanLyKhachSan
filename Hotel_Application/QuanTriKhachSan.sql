@@ -178,8 +178,9 @@ INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail
 					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123',5/3/1999,10/10/2023,1),
 					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123',5/3/1999,10/10/2015,2),
 					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123',5/3/1999,10/10/2000,3)
+
 SELECT * FROM NhanVien
-Delete from NhanVien
+
 
 
 INSERT INTO Luong VALUES (5,10000000,1),
@@ -202,10 +203,7 @@ SELECT * FROM ChiTietHoaDon
 DELETE ChiTietHoaDon
 
 
-select *from NhanVien
-
-select *  from NhanVien
-where TaiKhoan = 'Admin' and MatKhau = 'sa'
+select *from ChucVu
 
 --Lê Đức Tú
 -- Ràng buộc dữ liệu - Mặc định khuyến mãi là 0%.
