@@ -43,6 +43,7 @@ namespace Hotel_Application
             //UI Feature Button
             phong1.Show();
             phong1.BringToFront();
+            
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -123,6 +124,9 @@ namespace Hotel_Application
             //UI Feature Button
         }
 
-       
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

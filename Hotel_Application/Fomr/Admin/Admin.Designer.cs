@@ -35,10 +35,10 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
+            this.phong1 = new Hotel_Application.Phong();
             this.nhanSu1 = new Hotel_Application.NhanSu();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
-            this.phong1 = new Hotel_Application.Phong();
-            this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +109,23 @@
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // quanLyDichVu1
+            // 
+            this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
+            this.quanLyDichVu1.Name = "quanLyDichVu1";
+            this.quanLyDichVu1.Size = new System.Drawing.Size(1440, 1200);
+            this.quanLyDichVu1.TabIndex = 13;
+            // 
+            // phong1
+            // 
+            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.phong1.Location = new System.Drawing.Point(327, -6);
+            this.phong1.Name = "phong1";
+            this.phong1.Size = new System.Drawing.Size(1480, 1200);
+            this.phong1.TabIndex = 12;
             // 
             // nhanSu1
             // 
@@ -125,22 +142,6 @@
             this.quanLyHoaDon1.Name = "quanLyHoaDon1";
             this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
             this.quanLyHoaDon1.TabIndex = 10;
-            // 
-            // phong1
-            // 
-            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.phong1.Location = new System.Drawing.Point(327, -6);
-            this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1480, 1200);
-            this.phong1.TabIndex = 12;
-            // 
-            // quanLyDichVu1
-            // 
-            this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
-            this.quanLyDichVu1.Name = "quanLyDichVu1";
-            this.quanLyDichVu1.Size = new System.Drawing.Size(1440, 1200);
-            this.quanLyDichVu1.TabIndex = 13;
             // 
             // Admin
             // 
