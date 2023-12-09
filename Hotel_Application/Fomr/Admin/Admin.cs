@@ -16,7 +16,10 @@ namespace Hotel_Application
         public Admin()
         {
             InitializeComponent();
-           
+            btnNhanVien.BackColor = Color.Gray;
+            btnNhanVien.ForeColor = Color.White;
+            nhanSu1.Show();
+            nhanSu1.BringToFront();
         }
       
        
@@ -56,6 +59,8 @@ namespace Hotel_Application
             btnNhanVien.BackColor = Color.Gray;
             btnNhanVien.ForeColor = Color.White;
             //UI Feature Button
+            nhanSu1.Show();
+            nhanSu1.BringToFront();
         }
 
         private void btnService_Click(object sender, EventArgs e)

@@ -37,6 +37,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUINhanVien = new System.Windows.Forms.Button();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
+            this.nhanSu1 = new Hotel_Application.NhanSu();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             // btnRoom
             // 
-            this.btnRoom.Location = new System.Drawing.Point(77, 86);
+            this.btnRoom.Location = new System.Drawing.Point(77, 269);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Size = new System.Drawing.Size(180, 98);
             this.btnRoom.TabIndex = 2;
@@ -61,7 +62,7 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Location = new System.Drawing.Point(77, 272);
+            this.btnNhanVien.Location = new System.Drawing.Point(77, 85);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(180, 98);
             this.btnNhanVien.TabIndex = 3;
@@ -126,11 +127,20 @@
             this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
             this.quanLyHoaDon1.TabIndex = 10;
             // 
+            // nhanSu1
+            // 
+            this.nhanSu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.nhanSu1.Location = new System.Drawing.Point(327, -6);
+            this.nhanSu1.Name = "nhanSu1";
+            this.nhanSu1.Size = new System.Drawing.Size(1460, 1190);
+            this.nhanSu1.TabIndex = 11;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 1144);
+            this.Controls.Add(this.nhanSu1);
             this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.btnUINhanVien);
             this.Controls.Add(this.btnLogOut);
@@ -159,5 +169,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUINhanVien;
         private QuanLyHoaDon quanLyHoaDon1;
+        private NhanSu nhanSu1;
     }
 }
