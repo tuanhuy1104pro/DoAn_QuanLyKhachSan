@@ -112,7 +112,7 @@ namespace Hotel_Application
         public static DataRow rowFlag;
         private void btnEditChucVu_Click(object sender, EventArgs e)
         {
-            int i = 0;
+            
             
                 rowFlag = dataSet.Tables["ChucVu"].Rows.Find(maCV);
                 EditChucVu edit = new EditChucVu();
@@ -198,10 +198,26 @@ namespace Hotel_Application
                 maNS = int.Parse(row.Cells["MaNV"].Value.ToString());
             }
         }
-
+        public static DataRow rowFlagNhanVien;
         private void btnEditNhanSu_Click(object sender, EventArgs e)
         {
-
+            rowFlagNhanVien = dsNhanvien.Tables["NhanVien"].Rows.Find(maNS);
+            EditNhanSu edit = new EditNhanSu();
+            edit.Show();
+            edit.FormClosing += delegate
+            {
+                rowFlagNhanVien["TenNV"] = edit.txtHoTen.Text;
+                rowFlagNhanVien["SDT"] = int.Parse(edit.txtSdt.Text);
+                rowFlagNhanVien["EmailNV"] = edit.txtEmail.Text;
+                rowFlagNhanVien["GioiTinh"] = edit.cboGioiTinh.SelectedItem.ToString();
+                rowFlagNhanVien["TaiKhoan"] = edit.txtTaiKhoan.Text;
+                rowFlagNhanVien["MatKhau"] = edit.txtMatKhau.Text;
+                rowFlagNhanVien["NgaySinh"] = Convert.ToDateTime(edit.dtDoBorn.Text);
+                rowFlagNhanVien["NgayVaoLam"] = Convert.ToDateTime(edit.DtNgayVaoLam.Text);
+                rowFlagNhanVien["MaCV"] = int.Parse(edit.txtMaChucVu.Text);
+                SqlCommandBuilder cb = new SqlCommandBuilder(daNhanVien);
+                daNhanVien.Update(dsNhanvien, "NhanVien");
+            };
         }
         //Nhân Viên
     }

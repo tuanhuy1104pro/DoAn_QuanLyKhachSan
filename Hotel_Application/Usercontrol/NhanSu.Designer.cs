@@ -167,7 +167,7 @@
             // btnEditNhanSu
             // 
             this.btnEditNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditNhanSu.Location = new System.Drawing.Point(815, 1040);
+            this.btnEditNhanSu.Location = new System.Drawing.Point(409, 1040);
             this.btnEditNhanSu.Name = "btnEditNhanSu";
             this.btnEditNhanSu.Size = new System.Drawing.Size(172, 111);
             this.btnEditNhanSu.TabIndex = 44;
@@ -178,7 +178,7 @@
             // btnDeleteNhanSu
             // 
             this.btnDeleteNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNhanSu.Location = new System.Drawing.Point(535, 1040);
+            this.btnDeleteNhanSu.Location = new System.Drawing.Point(205, 1040);
             this.btnDeleteNhanSu.Name = "btnDeleteNhanSu";
             this.btnDeleteNhanSu.Size = new System.Drawing.Size(160, 111);
             this.btnDeleteNhanSu.TabIndex = 43;
@@ -189,7 +189,7 @@
             // btnAddNhanSu
             // 
             this.btnAddNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNhanSu.Location = new System.Drawing.Point(278, 1040);
+            this.btnAddNhanSu.Location = new System.Drawing.Point(6, 1040);
             this.btnAddNhanSu.Name = "btnAddNhanSu";
             this.btnAddNhanSu.Size = new System.Drawing.Size(162, 111);
             this.btnAddNhanSu.TabIndex = 42;

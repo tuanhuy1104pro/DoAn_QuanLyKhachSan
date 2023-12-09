@@ -35,9 +35,8 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnUINhanVien = new System.Windows.Forms.Button();
-            this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             this.nhanSu1 = new Hotel_Application.NhanSu();
+            this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,30 +101,12 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(185, 1047);
+            this.btnLogOut.Location = new System.Drawing.Point(-9, 1047);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(145, 98);
+            this.btnLogOut.Size = new System.Drawing.Size(339, 98);
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
-            // 
-            // btnUINhanVien
-            // 
-            this.btnUINhanVien.Location = new System.Drawing.Point(-2, 1046);
-            this.btnUINhanVien.Name = "btnUINhanVien";
-            this.btnUINhanVien.Size = new System.Drawing.Size(145, 98);
-            this.btnUINhanVien.TabIndex = 9;
-            this.btnUINhanVien.Text = "Giao Diện Nhân Viên";
-            this.btnUINhanVien.UseVisualStyleBackColor = true;
-            this.btnUINhanVien.Click += new System.EventHandler(this.btnUINhanVien_Click);
-            // 
-            // quanLyHoaDon1
-            // 
-            this.quanLyHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.quanLyHoaDon1.Location = new System.Drawing.Point(336, -6);
-            this.quanLyHoaDon1.Name = "quanLyHoaDon1";
-            this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
-            this.quanLyHoaDon1.TabIndex = 10;
             // 
             // nhanSu1
             // 
@@ -135,6 +116,14 @@
             this.nhanSu1.Size = new System.Drawing.Size(1460, 1190);
             this.nhanSu1.TabIndex = 11;
             // 
+            // quanLyHoaDon1
+            // 
+            this.quanLyHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quanLyHoaDon1.Location = new System.Drawing.Point(336, -6);
+            this.quanLyHoaDon1.Name = "quanLyHoaDon1";
+            this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
+            this.quanLyHoaDon1.TabIndex = 10;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -142,7 +131,6 @@
             this.ClientSize = new System.Drawing.Size(1778, 1144);
             this.Controls.Add(this.nhanSu1);
             this.Controls.Add(this.quanLyHoaDon1);
-            this.Controls.Add(this.btnUINhanVien);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnHoaDon);
@@ -167,7 +155,6 @@
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnUINhanVien;
         private QuanLyHoaDon quanLyHoaDon1;
         private NhanSu nhanSu1;
     }
