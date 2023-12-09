@@ -41,6 +41,8 @@ namespace Hotel_Application
             btnRoom.BackColor = Color.Gray;
             btnRoom.ForeColor= Color.White;
             //UI Feature Button
+            phong1.Show();
+            phong1.BringToFront();
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -79,6 +81,8 @@ namespace Hotel_Application
             btnService.BackColor = Color.Gray;
             btnService.ForeColor = Color.White;
             //UI Feature Button
+            quanLyDichVu1.Show();
+            quanLyDichVu1.BringToFront() ;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
@@ -119,14 +123,6 @@ namespace Hotel_Application
             //UI Feature Button
         }
 
-        private void btnUINhanVien_Click(object sender, EventArgs e)
-        {
-            NhanVien fomrNhanVien = new NhanVien();
-            fomrNhanVien.Location = this.Location;
-           fomrNhanVien.FormClosing += delegate { this.Close(); };
-            this.Hide();
-            fomrNhanVien.Show();
-            
-        }
+       
     }
 }
