@@ -53,7 +53,10 @@ namespace Hotel_Application
             key[0] = dataSet.Tables["ChucVu"].Columns[0];
             dataSet.Tables["ChucVu"].PrimaryKey = key;
             dgvChucVu.DataSource = dataSet.Tables["ChucVu"];
+            //
             SoluongdongChucvu = dgvChucVu.RowCount;
+
+            //
             dgvChucVu.ReadOnly = true;
             conn.Close();
         }
@@ -66,9 +69,12 @@ namespace Hotel_Application
             }
             SqlCommand cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
             cmd.ExecuteNonQuery();
+
+
             MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
             txtTenCV.Clear();
             txtPhuCap.Clear();
+            
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -123,6 +129,8 @@ namespace Hotel_Application
 
         //Nhân Viên
         int soluongdongNhanSu;
+        DataSet dsNhanvien = new DataSet();
+        SqlDataAdapter daNhanVien;
         public void loadBangNhanVien()
         {
             if (conn.State == ConnectionState.Closed)
@@ -130,13 +138,13 @@ namespace Hotel_Application
                 conn.Open();
             }
             string select = "Select * From NhanVien";
-            dataSet = new DataSet();
-            da = new SqlDataAdapter(select, conn);
-            da.Fill(dataSet, "NhanVien");
-            DataColumn[] key = new DataColumn[1];
-            key[0] = dataSet.Tables["NhanVien"].Columns[0];
-            dataSet.Tables["NhanVien"].PrimaryKey = key;
-            dgvNhanSu.DataSource = dataSet.Tables["NhanVien"];
+
+            daNhanVien = new SqlDataAdapter(select, conn);
+            daNhanVien.Fill(dsNhanvien, "NhanVien");
+            DataColumn[] keynv = new DataColumn[1];
+            keynv[0] = dsNhanvien.Tables["NhanVien"].Columns[0];
+            dsNhanvien.Tables["NhanVien"].PrimaryKey = keynv;
+            dgvNhanSu.DataSource = dsNhanvien.Tables["NhanVien"];
             soluongdongNhanSu = dgvNhanSu.RowCount;
             dgvNhanSu.ReadOnly = true;
             conn.Close();
@@ -144,16 +152,56 @@ namespace Hotel_Application
 
         private void btnAddNhanSu_Click(object sender, EventArgs e)
         {
-
-            if (conn.State == ConnectionState.Closed)
+    
+            AddNhanSu addns = new AddNhanSu();
+            addns.Show();
+            addns.FormClosing += delegate
             {
-                conn.Open();
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                if (addns.DialogResult == DialogResult.OK)
+                {
+                    NhanVienClass nhanvien = new NhanVienClass();
+                    
+                    SqlCommand cmd = new SqlCommand($"INSERT INTO  NhanVien VALUES(N'{addns.txtHoTen.Text}',{int.Parse(addns.txtSdt.Text)},'{addns.txtEmail.Text}',N'{addns.cboGioiTinh.SelectedItem.ToString()}','{addns.txtTaiKhoan.Text}','{addns.txtMatKhau.Text}','{addns.dtDoBorn.Text}','{addns.DtNgayVaoLam.Text}',{int.Parse(addns.txtMaChucVu.Text)})", conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Đã thêm nhân viên");
+                }
+                conn.Close();
+            };  
+        }
+
+        private void btnReloadNhanSu_Click(object sender, EventArgs e)
+        {
+            loadBangNhanVien();
+        }
+
+        private void btnDeleteNhanSu_Click(object sender, EventArgs e)
+        {
+            DataRow dr = dsNhanvien.Tables["NhanVien"].Rows.Find(maNS);
+            if (dr != null)
+            {
+                dr.Delete();
             }
-            SqlCommand cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
-            txtTenCV.Clear();
-            txtPhuCap.Clear();
+            SqlCommandBuilder cb = new SqlCommandBuilder(daNhanVien);
+            daNhanVien.Update(dsNhanvien, "NhanVien");
+            soluongdongNhanSu--;
+        }
+        public int maNS;
+        private void dgvNhanSu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < soluongdongNhanSu - 1)
+            {
+                DataGridViewRow row = this.dgvNhanSu.Rows[e.RowIndex];
+                maNS = int.Parse(row.Cells["MaNV"].Value.ToString());
+            }
+        }
+
+        private void btnEditNhanSu_Click(object sender, EventArgs e)
+        {
+
         }
         //Nhân Viên
     }

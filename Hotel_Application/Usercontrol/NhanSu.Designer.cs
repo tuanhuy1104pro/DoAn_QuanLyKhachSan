@@ -44,6 +44,7 @@
             this.btnAddNhanSu = new System.Windows.Forms.Button();
             this.lbTimNhanSu = new System.Windows.Forms.Label();
             this.btnReload = new System.Windows.Forms.Button();
+            this.btnReloadNhanSu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             this.dgvNhanSu.RowTemplate.Height = 28;
             this.dgvNhanSu.Size = new System.Drawing.Size(1451, 440);
             this.dgvNhanSu.TabIndex = 34;
+            this.dgvNhanSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanSu_CellClick);
             // 
             // label6
             // 
@@ -171,6 +173,7 @@
             this.btnEditNhanSu.TabIndex = 44;
             this.btnEditNhanSu.Text = "Sửa";
             this.btnEditNhanSu.UseVisualStyleBackColor = true;
+            this.btnEditNhanSu.Click += new System.EventHandler(this.btnEditNhanSu_Click);
             // 
             // btnDeleteNhanSu
             // 
@@ -181,6 +184,7 @@
             this.btnDeleteNhanSu.TabIndex = 43;
             this.btnDeleteNhanSu.Text = "Xóa";
             this.btnDeleteNhanSu.UseVisualStyleBackColor = true;
+            this.btnDeleteNhanSu.Click += new System.EventHandler(this.btnDeleteNhanSu_Click);
             // 
             // btnAddNhanSu
             // 
@@ -215,11 +219,23 @@
             this.btnReload.UseVisualStyleBackColor = true;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
+            // btnReloadNhanSu
+            // 
+            this.btnReloadNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReloadNhanSu.Location = new System.Drawing.Point(1320, 482);
+            this.btnReloadNhanSu.Name = "btnReloadNhanSu";
+            this.btnReloadNhanSu.Size = new System.Drawing.Size(137, 63);
+            this.btnReloadNhanSu.TabIndex = 47;
+            this.btnReloadNhanSu.Text = "Reload";
+            this.btnReloadNhanSu.UseVisualStyleBackColor = true;
+            this.btnReloadNhanSu.Click += new System.EventHandler(this.btnReloadNhanSu_Click);
+            // 
             // NhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.btnReloadNhanSu);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.lbTimNhanSu);
             this.Controls.Add(this.btnEditNhanSu);
@@ -263,5 +279,6 @@
         private System.Windows.Forms.Label lbTimNhanSu;
         private System.Windows.Forms.Button btnReload;
         public System.Windows.Forms.DataGridView dgvChucVu;
+        private System.Windows.Forms.Button btnReloadNhanSu;
     }
 }

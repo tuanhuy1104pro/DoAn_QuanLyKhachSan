@@ -202,17 +202,7 @@ INSERT INTO ChiTietHoaDon VALUES (1,2,100),
 SELECT * FROM ChiTietHoaDon
 DELETE ChiTietHoaDon
 
-select * from HoaDon
-inner join KhachHang on HoaDon.MaKhachHang = KhachHang.MaKhachHang
 
-select * from HoaDon
-where HoaDon.MaHoaDon = '4'
-
-select*from HoaDon
-where MaKhachHang in (
-select MaKhachHang from KhachHang
-where KhachHang.HoTen = N'Nguyễn Thị Yến'
-) or  HoaDon.MaHoaDon ='1'
 
 --Lê Đức Tú
 -- Ràng buộc dữ liệu - Mặc định khuyến mãi là 0%.
