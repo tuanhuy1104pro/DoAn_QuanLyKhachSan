@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNhanSu.Designer.cs">
+      <DependentUpon>AddNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomr\Admin\EditChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\Admin\EditChucVu.Designer.cs">
+      <DependentUpon>EditChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Class\ChucVuClass.cs" />
     <Compile Include="Features\Class\KhachHangClass.cs" />
     <Compile Include="Features\Class\LuongClass.cs" />
@@ -113,6 +125,12 @@
     <Compile Include="Fomr\ĐangKyDangNhap\QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNhanSu.resx">
+      <DependentUpon>AddNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomr\Admin\EditChucVu.resx">
+      <DependentUpon>EditChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fomr\Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
