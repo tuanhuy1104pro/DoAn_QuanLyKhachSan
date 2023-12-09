@@ -31,6 +31,7 @@ namespace Hotel_Application
 
         private void btnDangKyHoaDon_Click(object sender, EventArgs e)
         {
+            //
             ThemDichVuVaoHoaDon.BackColor = Color.Transparent;
             ThemDichVuVaoHoaDon.ForeColor = Color.Black;
             btnHome.BackColor = Color.Transparent;
@@ -43,6 +44,8 @@ namespace Hotel_Application
             
             btnDangKyHoaDon.BackColor = Color.Gray;
             btnDangKyHoaDon.ForeColor = Color.White;
+            //
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -77,8 +80,10 @@ namespace Hotel_Application
             ThemDichVuVaoHoaDon.ForeColor = Color.Black;
 
             btnHoaDon.BackColor = Color.Gray;
-            btnHoaDon.ForeColor = Color.White; 
+            btnHoaDon.ForeColor = Color.White;
             //UI Feature Button
+            quanLyHoaDon1.Show();
+            quanLyHoaDon1.BringToFront() ;
         }
 
        

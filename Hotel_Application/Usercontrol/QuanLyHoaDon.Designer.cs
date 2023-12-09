@@ -30,9 +30,9 @@
         {
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboSortHoaDon = new System.Windows.Forms.ComboBox();
             this.lbTimHoaDon = new System.Windows.Forms.Label();
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
+            this.btnReload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 62;
             this.dgvHoaDon.RowTemplate.Height = 28;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1414, 827);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1145, 827);
             this.dgvHoaDon.TabIndex = 0;
             // 
             // label1
@@ -57,25 +57,12 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Hóa Đơn";
             // 
-            // cboSortHoaDon
-            // 
-            this.cboSortHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSortHoaDon.FormattingEnabled = true;
-            this.cboSortHoaDon.Items.AddRange(new object[] {
-            "Tăng Dần",
-            "Giảm Dần",
-            "Theo Thời Gian Thuê"});
-            this.cboSortHoaDon.Location = new System.Drawing.Point(1215, 160);
-            this.cboSortHoaDon.Name = "cboSortHoaDon";
-            this.cboSortHoaDon.Size = new System.Drawing.Size(202, 37);
-            this.cboSortHoaDon.TabIndex = 50;
-            // 
             // lbTimHoaDon
             // 
             this.lbTimHoaDon.AutoSize = true;
             this.lbTimHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimHoaDon.ForeColor = System.Drawing.Color.White;
-            this.lbTimHoaDon.Location = new System.Drawing.Point(1300, 1097);
+            this.lbTimHoaDon.Location = new System.Drawing.Point(1192, 1097);
             this.lbTimHoaDon.Name = "lbTimHoaDon";
             this.lbTimHoaDon.Size = new System.Drawing.Size(103, 25);
             this.lbTimHoaDon.TabIndex = 51;
@@ -85,27 +72,39 @@
             // txtMaHoaDon
             // 
             this.txtMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHoaDon.Location = new System.Drawing.Point(900, 1091);
+            this.txtMaHoaDon.Location = new System.Drawing.Point(762, 1091);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
             this.txtMaHoaDon.Size = new System.Drawing.Size(394, 35);
             this.txtMaHoaDon.TabIndex = 52;
-            this.txtMaHoaDon.Text = "Mã Hóa Đơn Hoặc Tên Khách Hàng";
+            this.txtMaHoaDon.Text = "Mã Hóa Đơn Hoặc Tên Khách Hàng/SDT";
             this.txtMaHoaDon.Click += new System.EventHandler(this.txtMaHoaDon_Click);
-            this.txtMaHoaDon.TextChanged += new System.EventHandler(this.txtMaHoaDon_TextChanged);
+          
             this.txtMaHoaDon.Leave += new System.EventHandler(this.txtMaHoaDon_Leave);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.Location = new System.Drawing.Point(1197, 230);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(180, 98);
+            this.btnReload.TabIndex = 53;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // QuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.txtMaHoaDon);
             this.Controls.Add(this.lbTimHoaDon);
-            this.Controls.Add(this.cboSortHoaDon);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHoaDon);
             this.Name = "QuanLyHoaDon";
             this.Size = new System.Drawing.Size(1420, 1200);
+            this.Load += new System.EventHandler(this.QuanLyHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,8 +115,8 @@
 
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboSortHoaDon;
         private System.Windows.Forms.Label lbTimHoaDon;
         private System.Windows.Forms.TextBox txtMaHoaDon;
+        private System.Windows.Forms.Button btnReload;
     }
 }

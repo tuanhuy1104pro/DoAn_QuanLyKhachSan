@@ -36,6 +36,7 @@
             this.ThemDichVuVaoHoaDon = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trangChu1 = new Hotel_Application.TrangChu();
+            this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +118,20 @@
             this.trangChu1.Size = new System.Drawing.Size(1460, 1200);
             this.trangChu1.TabIndex = 18;
             // 
+            // quanLyHoaDon1
+            // 
+            this.quanLyHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quanLyHoaDon1.Location = new System.Drawing.Point(310, -3);
+            this.quanLyHoaDon1.Name = "quanLyHoaDon1";
+            this.quanLyHoaDon1.Size = new System.Drawing.Size(1430, 1200);
+            this.quanLyHoaDon1.TabIndex = 19;
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1742, 1144);
+            this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.trangChu1);
             this.Controls.Add(this.ThemDichVuVaoHoaDon);
             this.Controls.Add(this.btnDangKyHoaDon);
@@ -149,5 +159,6 @@
         private System.Windows.Forms.Button ThemDichVuVaoHoaDon;
         private System.Windows.Forms.PictureBox pictureBox1;
         private TrangChu trangChu1;
+        private QuanLyHoaDon quanLyHoaDon1;
     }
 }

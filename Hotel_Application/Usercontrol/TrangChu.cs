@@ -94,7 +94,7 @@ namespace Hotel_Application
             cmd = new SqlCommand(select, conn);
             SqlDataReader dr = cmd.ExecuteReader();
             dr.Read();
-            cboTenChucVu.SelectedText = dr["TenCV"].ToString();
+            cboTenChucVu.SelectedItem = dr["TenCV"].ToString();
             txtPhuCap.Text = dr["PhuCap"].ToString();
             DtNgayVaoLam.Text = doituongNV.NgayVaoLam.ToString();
             dr.Close();

@@ -92,6 +92,8 @@ namespace Hotel_Application
             btnHoaDon.BackColor = Color.Gray;
             btnHoaDon.ForeColor = Color.White;
             //UI Feature Button
+            quanLyHoaDon1.Show();
+            quanLyHoaDon1.BringToFront();
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
