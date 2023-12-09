@@ -151,7 +151,7 @@ namespace Hotel_Application
             updatesdt = $"Update NhanVien\nSet SDT = '{txtSdt.Text}' where MaNV = '{doituongNV.MaNV}'";
             updateemail = $"Update NhanVien\nSet EmailNV = '{txtEmail.Text}' where MaNV = '{doituongNV.MaNV}'";
             updateNgaysinh = $"Update NhanVien\nSet NgaySinh = '{dtDoBorn.Text}' where MaNV = '{doituongNV.MaNV}'";
-            updategioitinh = $"Update NhanVien\nSet GioiTinh = '{cboGioiTinh.SelectedItem}' where MaNV = '{doituongNV.MaNV}'";
+            updategioitinh = $"Update NhanVien\nSet GioiTinh = N'{cboGioiTinh.SelectedItem}' where MaNV = '{doituongNV.MaNV}'";
 
             cmd = new SqlCommand(updatename, conn);
             cmd.ExecuteNonQuery();
