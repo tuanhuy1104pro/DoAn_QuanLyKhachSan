@@ -67,13 +67,22 @@ namespace Hotel_Application
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
-            cmd.ExecuteNonQuery();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
+                cmd.ExecuteNonQuery();
 
 
-            MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
-            txtTenCV.Clear();
-            txtPhuCap.Clear();
+                MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
+                txtTenCV.Clear();
+                txtPhuCap.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đã tồn tạo chức vụ");
+                
+            }
             
         }
 
@@ -157,19 +166,25 @@ namespace Hotel_Application
             addns.Show();
             addns.FormClosing += delegate
             {
-                if (conn.State == ConnectionState.Closed)
+                try
                 {
-                    conn.Open();
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    if (addns.DialogResult == DialogResult.OK)
+                    {
+                        NhanVienClass nhanvien = new NhanVienClass();
+
+                        SqlCommand cmd = new SqlCommand($"INSERT INTO  NhanVien VALUES(N'{addns.txtHoTen.Text}',{int.Parse(addns.txtSdt.Text)},'{addns.txtEmail.Text}',N'{addns.cboGioiTinh.SelectedItem.ToString()}','{addns.txtTaiKhoan.Text}','{addns.txtMatKhau.Text}','{addns.dtDoBorn.Text}','{addns.DtNgayVaoLam.Text}',{int.Parse(addns.txtMaChucVu.Text)})", conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show($"Đã thêm nhân viên");
+                    }
+                    conn.Close();
                 }
-                if (addns.DialogResult == DialogResult.OK)
-                {
-                    NhanVienClass nhanvien = new NhanVienClass();
-                    
-                    SqlCommand cmd = new SqlCommand($"INSERT INTO  NhanVien VALUES(N'{addns.txtHoTen.Text}',{int.Parse(addns.txtSdt.Text)},'{addns.txtEmail.Text}',N'{addns.cboGioiTinh.SelectedItem.ToString()}','{addns.txtTaiKhoan.Text}','{addns.txtMatKhau.Text}','{addns.dtDoBorn.Text}','{addns.DtNgayVaoLam.Text}',{int.Parse(addns.txtMaChucVu.Text)})", conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show($"Đã thêm nhân viên");
+                catch {
+                    MessageBox.Show("LỖi");
                 }
-                conn.Close();
             };  
         }
 

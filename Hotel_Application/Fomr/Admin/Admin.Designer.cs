@@ -116,8 +116,9 @@
             this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
             this.quanLyDichVu1.Name = "quanLyDichVu1";
-            this.quanLyDichVu1.Size = new System.Drawing.Size(1440, 1200);
+            this.quanLyDichVu1.Size = new System.Drawing.Size(1450, 1200);
             this.quanLyDichVu1.TabIndex = 13;
+           
             // 
             // phong1
             // 

@@ -38,6 +38,7 @@ namespace Hotel_Application
             else
             {
                 conn.Open();
+
                 SqlCommand cmd = new SqlCommand($"Select *from ChucVu where MaCV = {txtMaChucVu.Text}", conn);
                 SqlDataReader rdr = cmd.ExecuteReader();
                 bool flag = rdr.Read();

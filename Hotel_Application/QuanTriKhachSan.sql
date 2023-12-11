@@ -113,8 +113,8 @@ Create table ChiTietHoaDon
 go
 DBCC CHECKIDENT('LoaiDichVu', RESEED,1)
 INSERT INTO LoaiDichVu VALUES(N'Đồ Ăn'),
-							(N'	Masage'),
-							(N'Bạn cùng phòng'),
+							(N'	Phòng'),
+							(N'Giải Trí'),
 							(N'Tham quan')
 SELECT * FROM LoaiDichVu
 
