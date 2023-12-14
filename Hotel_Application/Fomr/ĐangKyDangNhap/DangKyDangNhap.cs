@@ -15,7 +15,7 @@ namespace Hotel_Application
     public partial class DangKyDangNhap : Form
     {
        
-       public static NhanVienClass DoiTuongNV = new NhanVienClass();
+       public static NhanVienClass DoiTuongNV;
        SqlConnection conn = ConnectDB.connectstring;
        SqlCommand cmd;
         public DangKyDangNhap()
@@ -71,7 +71,7 @@ namespace Hotel_Application
                     cmd = new SqlCommand(select2, conn);
                     SqlDataReader dr2 = cmd.ExecuteReader();
                     dr2.Read();
-
+                    DoiTuongNV = new NhanVienClass();
                     //Luu doi tuong login
                     DoiTuongNV.MaNV = Convert.ToInt32(dr2["MaNV"].ToString());
                     DoiTuongNV.TenNV = dr2["TenNV"].ToString();

@@ -62,7 +62,7 @@
             this.lbTimHoaDon.AutoSize = true;
             this.lbTimHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimHoaDon.ForeColor = System.Drawing.Color.White;
-            this.lbTimHoaDon.Location = new System.Drawing.Point(1192, 1097);
+            this.lbTimHoaDon.Location = new System.Drawing.Point(423, 179);
             this.lbTimHoaDon.Name = "lbTimHoaDon";
             this.lbTimHoaDon.Size = new System.Drawing.Size(103, 25);
             this.lbTimHoaDon.TabIndex = 51;
@@ -72,13 +72,12 @@
             // txtMaHoaDon
             // 
             this.txtMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHoaDon.Location = new System.Drawing.Point(762, 1091);
+            this.txtMaHoaDon.Location = new System.Drawing.Point(8, 173);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
             this.txtMaHoaDon.Size = new System.Drawing.Size(394, 35);
             this.txtMaHoaDon.TabIndex = 52;
             this.txtMaHoaDon.Text = "Mã Hóa Đơn Hoặc Tên Khách Hàng/SDT";
             this.txtMaHoaDon.Click += new System.EventHandler(this.txtMaHoaDon_Click);
-          
             this.txtMaHoaDon.Leave += new System.EventHandler(this.txtMaHoaDon_Leave);
             // 
             // btnReload
@@ -103,7 +102,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHoaDon);
             this.Name = "QuanLyHoaDon";
-            this.Size = new System.Drawing.Size(1420, 1200);
+            this.Size = new System.Drawing.Size(1590, 1080);
             this.Load += new System.EventHandler(this.QuanLyHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);

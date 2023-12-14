@@ -55,7 +55,7 @@
             // btnEditService
             // 
             this.btnEditService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditService.Location = new System.Drawing.Point(952, 260);
+            this.btnEditService.Location = new System.Drawing.Point(1049, 350);
             this.btnEditService.Name = "btnEditService";
             this.btnEditService.Size = new System.Drawing.Size(108, 86);
             this.btnEditService.TabIndex = 61;
@@ -65,7 +65,7 @@
             // btnDeleteService
             // 
             this.btnDeleteService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteService.Location = new System.Drawing.Point(654, 260);
+            this.btnDeleteService.Location = new System.Drawing.Point(751, 350);
             this.btnDeleteService.Name = "btnDeleteService";
             this.btnDeleteService.Size = new System.Drawing.Size(108, 86);
             this.btnDeleteService.TabIndex = 60;
@@ -76,7 +76,7 @@
             // dgvDichVu
             // 
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(339, 119);
+            this.dgvDichVu.Location = new System.Drawing.Point(436, 209);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 62;
             this.dgvDichVu.RowTemplate.Height = 28;
@@ -87,7 +87,7 @@
             // txtKhuyenMaiGoi
             // 
             this.txtKhuyenMaiGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhuyenMaiGoi.Location = new System.Drawing.Point(45, 600);
+            this.txtKhuyenMaiGoi.Location = new System.Drawing.Point(142, 690);
             this.txtKhuyenMaiGoi.Name = "txtKhuyenMaiGoi";
             this.txtKhuyenMaiGoi.Size = new System.Drawing.Size(300, 39);
             this.txtKhuyenMaiGoi.TabIndex = 51;
@@ -97,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(487, 19);
+            this.label1.Location = new System.Drawing.Point(584, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(416, 55);
             this.label1.TabIndex = 48;
@@ -106,7 +106,7 @@
             // txtTemGoi
             // 
             this.txtTemGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTemGoi.Location = new System.Drawing.Point(45, 524);
+            this.txtTemGoi.Location = new System.Drawing.Point(142, 614);
             this.txtTemGoi.Name = "txtTemGoi";
             this.txtTemGoi.Size = new System.Drawing.Size(300, 39);
             this.txtTemGoi.TabIndex = 47;
@@ -116,7 +116,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(198, 119);
+            this.label7.Location = new System.Drawing.Point(295, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 32);
             this.label7.TabIndex = 66;
@@ -127,7 +127,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(462, 375);
+            this.label8.Location = new System.Drawing.Point(559, 465);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(493, 55);
             this.label8.TabIndex = 67;
@@ -138,7 +138,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(136, 463);
+            this.label9.Location = new System.Drawing.Point(233, 553);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 32);
             this.label9.TabIndex = 68;
@@ -149,7 +149,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(360, 527);
+            this.label10.Location = new System.Drawing.Point(457, 617);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(122, 32);
             this.label10.TabIndex = 69;
@@ -160,7 +160,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(360, 600);
+            this.label11.Location = new System.Drawing.Point(457, 690);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(303, 32);
             this.label11.TabIndex = 70;
@@ -169,7 +169,7 @@
             // btnAddGoiService
             // 
             this.btnAddGoiService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddGoiService.Location = new System.Drawing.Point(142, 658);
+            this.btnAddGoiService.Location = new System.Drawing.Point(239, 748);
             this.btnAddGoiService.Name = "btnAddGoiService";
             this.btnAddGoiService.Size = new System.Drawing.Size(108, 86);
             this.btnAddGoiService.TabIndex = 71;
@@ -181,7 +181,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(966, 472);
+            this.label2.Location = new System.Drawing.Point(1063, 562);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(301, 32);
             this.label2.TabIndex = 72;
@@ -191,7 +191,7 @@
             // 
             this.cboService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboService.FormattingEnabled = true;
-            this.cboService.Location = new System.Drawing.Point(972, 528);
+            this.cboService.Location = new System.Drawing.Point(1069, 618);
             this.cboService.Name = "cboService";
             this.cboService.Size = new System.Drawing.Size(282, 37);
             this.cboService.TabIndex = 73;
@@ -201,7 +201,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1260, 531);
+            this.label3.Location = new System.Drawing.Point(1357, 621);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 32);
             this.label3.TabIndex = 74;
@@ -212,7 +212,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1260, 582);
+            this.label6.Location = new System.Drawing.Point(1357, 672);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 32);
             this.label6.TabIndex = 76;
@@ -222,7 +222,7 @@
             // 
             this.cboGoiService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGoiService.FormattingEnabled = true;
-            this.cboGoiService.Location = new System.Drawing.Point(972, 582);
+            this.cboGoiService.Location = new System.Drawing.Point(1069, 672);
             this.cboGoiService.Name = "cboGoiService";
             this.cboGoiService.Size = new System.Drawing.Size(282, 37);
             this.cboGoiService.TabIndex = 75;
@@ -230,7 +230,7 @@
             // btnAddService
             // 
             this.btnAddService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddService.Location = new System.Drawing.Point(339, 260);
+            this.btnAddService.Location = new System.Drawing.Point(436, 350);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(108, 86);
             this.btnAddService.TabIndex = 59;
@@ -241,7 +241,7 @@
             // btnAddIntoGoi
             // 
             this.btnAddIntoGoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddIntoGoi.Location = new System.Drawing.Point(1063, 643);
+            this.btnAddIntoGoi.Location = new System.Drawing.Point(1160, 733);
             this.btnAddIntoGoi.Name = "btnAddIntoGoi";
             this.btnAddIntoGoi.Size = new System.Drawing.Size(108, 86);
             this.btnAddIntoGoi.TabIndex = 77;
@@ -251,7 +251,7 @@
             // btnEditGoiService
             // 
             this.btnEditGoiService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditGoiService.Location = new System.Drawing.Point(265, 453);
+            this.btnEditGoiService.Location = new System.Drawing.Point(362, 543);
             this.btnEditGoiService.Name = "btnEditGoiService";
             this.btnEditGoiService.Size = new System.Drawing.Size(80, 51);
             this.btnEditGoiService.TabIndex = 79;
@@ -261,7 +261,7 @@
             // btnDeleteGoiService
             // 
             this.btnDeleteGoiService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteGoiService.Location = new System.Drawing.Point(45, 453);
+            this.btnDeleteGoiService.Location = new System.Drawing.Point(142, 543);
             this.btnDeleteGoiService.Name = "btnDeleteGoiService";
             this.btnDeleteGoiService.Size = new System.Drawing.Size(85, 51);
             this.btnDeleteGoiService.TabIndex = 78;
@@ -295,7 +295,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTemGoi);
             this.Name = "QuanLyDichVu";
-            this.Size = new System.Drawing.Size(1440, 1200);
+            this.Size = new System.Drawing.Size(1590, 1080);
             this.Load += new System.EventHandler(this.QuanLyDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.ResumeLayout(false);

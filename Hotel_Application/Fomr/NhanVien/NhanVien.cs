@@ -118,6 +118,10 @@ namespace Hotel_Application
             ThemDichVuVaoHoaDon.ForeColor = Color.White;
         }
 
-      
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            DangKyDangNhap.DoiTuongNV = null;
+        }
     }
 }

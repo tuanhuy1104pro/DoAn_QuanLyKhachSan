@@ -1,5 +1,4 @@
-﻿use master
-create database QLKS
+﻿create database QLKS
 use QLKS
 go 
 --Nhân Viên - Lương - Chức Vụ
@@ -8,25 +7,31 @@ create table ChucVu
 	MaCV int identity(1,1) primary key,
 	TenCV nvarchar(25) not null,
 	PhuCap float default null
-)
+);
+alter table ChucVu
+add constraint Unique_TenCV unique(TenCV)
 create table NhanVien
 (
 	MaNV int identity(1,1) not null,
 	TenNV nvarchar(50) not null,
-	SDT bigint not null unique,
-	EmailNV varchar(120) not null unique,
+	SDT bigint not null,
+	EmailNV varchar(120) not null,
 	GioiTinh nvarchar(50) not null,
-	TaiKhoan varchar(150) not null unique,
+	TaiKhoan varchar(150) not null,
 	MatKhau varchar(150) not null,
 	NgaySinh datetime check (Year(GETDATE()) - Year(NgaySinh) >= 18) not null,
+	--TuoiNV tinyint check(TuoiNV >= 18 and TuoiNV <= 60) not null,
 	NgayVaoLam datetime not null,
 	MaCV int foreign key references ChucVu,
 	constraint PK_NhanVien primary key (MaNV)
 )
 
+alter table NhanVien
+add constraint Unique_SDT unique(SDT)
+
 create table Luong
 (
-	SoNgayNghi int default 0 not null, 
+	SoNgayNghi int null, 
 	TienLuong float,
 	MaNV int foreign key references NhanVien primary key
 )
@@ -39,7 +44,7 @@ create table LoaiPhong
 create table Phong
 (
 	MaPhong int identity(1,1) primary key,
-	TenPhong varchar(50),
+	TenPhong varchar(50) unique,
 	MaLoaiPhong int foreign key references LoaiPhong,
 )
 -- Tên phòng - 3 loại phòng : Phòng đơn : Tên phòng sẽ bắt đầu bằng chữ D - Phòng Đôi là C - Phòng Vip: V
@@ -72,28 +77,30 @@ create table ChiTietGoi
 	MaDichVu int constraint FK_CTGoi_MaDichVu foreign key  references DichVu,
 	GhiChu nvarchar(50)
 )
+-- Làm một Method về tổng tiền. ĐƯợc tính bằng các dịch vụ có trong chi tiết gói
 --Khách Hàng
 Create table KhachHang
 (
 	MaKhachHang int identity(1,1) primary key,
-	HoTen nvarchar(50),
+	HoTen nvarchar(50), --
 	DiaChi nvarchar(50),
-	SoDienThoai varchar(30) unique,
-	Email varchar(50) not null unique,
-	TaiKhoan varchar(50) not null unique,
+	SoDienThoai varchar(30) unique,--
+	Email varchar(50) not null,--
+	TaiKhoan varchar(50) unique not null,
 	MatKhau varchar(50) not null
 )--Bắt buộc phải có Email, họ tên - địa chỉ
 create table HoaDon
 (
 	MaHoaDon int identity(1,1),
-	NgayThue datetime,
-	NgayTra datetime,
-	TongTien float null,
-	MaNV int foreign key references NhanVien,
-	MaKhachHang int foreign key references KhachHang,
-	MaPhong int foreign key references Phong,
+	NgayThue datetime,--
+	NgayTra datetime,--
+	TongTien float null, --
+	MaNV int foreign key references NhanVien, -- 
+	MaKhachHang int foreign key references KhachHang,--
+	MaPhong int foreign key references Phong,--
 	constraint PK_HD primary key (MaHoaDon)
 )
+-- Ma phong chi duoc them khi Ngay thue ngay tra cua nhung hoa don khac da het han: vd ngay tra 22/11/2023 maphong 2 thi neu tao hoadon thi hoa don do phai co ngay thue > ngay tra cua nhung hoa don khac co ma la 2. gan nhat 1 tuan  
 Create table ChiTietHoaDon
 (
 	MaHoaDon int,
@@ -104,11 +111,11 @@ Create table ChiTietHoaDon
 )
 
 go
-DBCC CHECKIDENT('LoaiDichVu', RESEED,0)
-INSERT INTO LoaiDichVu VALUES(N'Ăn Uống'),
-							(N'	Tham Quan'),
+DBCC CHECKIDENT('LoaiDichVu', RESEED,1)
+INSERT INTO LoaiDichVu VALUES(N'Đồ Ăn'),
+							(N'	Phòng'),
 							(N'Giải Trí'),
-							(N'Tiệc')
+							(N'Tham quan')
 SELECT * FROM LoaiDichVu
 
 --
@@ -118,10 +125,10 @@ DBCC CHECKIDENT('LoaiDichVu', RESEED,2)
 INSERT INTO LoaiDichVu VALUES(N'Tham quan')
 --
 
-DBCC CHECKIDENT('DichVu', RESEED, 0)
-INSERT INTO DichVu (TenDichVu,GiaTien,MaLoaiDichVu)  VALUES(N'Dọn dẹp Phòng',50,1),
-						(N'Tổ chức tiệc cưới',100,2),
-						(N'Ăn Sáng',200,3)
+DBCC CHECKIDENT('DichVu', RESEED, 1)
+INSERT INTO DichVu (TenDichVu,GiaTien,MaLoaiDichVu)  VALUES(N'Dọn dẹp',50,1),
+						(N'Tổ chức tiệc và dọn dẹp',100,2),
+						(N'Nấu ăn tổ chức tiệc và dọn dẹp',200,3)
 SELECT * FROM DichVu
 Delete from DichVu
 --
@@ -133,9 +140,9 @@ INSERT INTO GoiDichVu values (N'Xuân',0.5),
 SELECT * FROM GoiDichVu
 
 INSERT INTO ChiTietGoi  VALUES(1,1,N'Khuyến mãi mùa xuân'),
-									(1,2,N'Khuyến mãi mùa hạ'),
-									(2,1,N'Khuyến mãi mùa thu'),
-									(3,1,N'Khuyến mãi mùa đông')
+									(2,2,N'Khuyến mãi mùa hạ'),
+									(3,3,N'Khuyến mãi mùa thu'),
+									(4,1,N'Khuyến mãi mùa đông')
 SELECT * FROM ChiTietGoi
 
 DBCC CHECKIDENT('LoaiPhong', RESEED, 0)
@@ -146,9 +153,9 @@ SELECT * FROM LoaiPhong
 delete from LoaiPhong
 --
 DBCC CHECKIDENT('Phong', RESEED, 0)
-INSERT INTO Phong (TenPhong,MaLoaiPhong) VALUES('PH01',3),
-														('PH02',1),
-														('PH03',2)
+INSERT INTO Phong (TenPhong,MaLoaiPhong) VALUES('PH01',1),
+														('PH02',2),
+														('PH03',3)
 SELECT * FROM Phong
 DELETE from Phong
 --
@@ -167,31 +174,31 @@ SELECT * FROM ChucVu
 
 DBCC CHECKIDENT('NhanVien', RESEED, 0)
 set dateformat dmy
-INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa','11/4/2003','10/10/2023',1),
-					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123','5/3/1999','10/10/2023',1),
-					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123','5/3/1999','10/10/2015',2),
-					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123','5/3/1999','10/10/2000',3)
+INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa',11/4/2003,10/10/2023,1),
+					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123',5/3/1999,10/10/2023,1),
+					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123',5/3/1999,10/10/2015,2),
+					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123',5/3/1999,10/10/2000,3)
 
 SELECT * FROM NhanVien
-Delete from NhanVien
+
 
 
 INSERT INTO Luong VALUES (5,10000000,1),
 						(4,15000000,2),
-						(0,5000000,3)
+						(null,5000000,3)
 SELECT * FROM Luong
 
 DBCC CHECKIDENT('HoaDon', RESEED, 0)
 SET DATEFORMAT DMY
 INSERT INTO HoaDon (NgayThue,NgayTra,TongTien,MaKhachHang,MaNV,MaPhong) VALUES ('19/11/2023','23/11/2023',450,1,1,2),
-													('20/11/2023','24/11/2023',500,2,2,3),
-													('21/11/2023','26/11/2023',600,1,1,4)
+													('20/11/2023','24/11/2023',500,2,2,1),
+													('21/11/2023','26/11/2023',600,3,3,2)
 SELECT * FROM HoaDon
 DELETE from HoaDon
 
-INSERT INTO ChiTietHoaDon VALUES (6,1,100),
-								(7,1,100),
-								(8,2,200)
+INSERT INTO ChiTietHoaDon VALUES (1,2,100),
+								(2,3,100),
+								(1,4,200)
 SELECT * FROM ChiTietHoaDon
 DELETE ChiTietHoaDon
 
@@ -221,7 +228,6 @@ EXEC KT_MKKH N'Nguyễn Thị Linh','TP.HCM',0316243505,'Linh@gmail.com','Linh12
 SELECT * FROM KhachHang
 
 --Tạo thủ tục để kiểm tra tài khoản đã sử dụng rồi hay chưa khi thực hiện thêm mới khách hàng
-
 GO
 CREATE PROC KT_TKKH
 @HoTen nvarchar(50),@DiaChi nvarchar(50),@SoDienThoai varchar(30),@Email varchar(50),@TaiKhoan varchar(50),@MatKhau varchar(50)
@@ -236,9 +242,8 @@ BEGIN
 END	
 EXEC KT_TKKH N'Nguyễn Trần Tuấn Huy','TP.HCM',0316243505,'Huy@gmail.com','Huy123','Huy123'
 SELECT * FROM KhachHang	
-				
+					
 --Tạo hàm tìm kiếm nhân viên
-
 GO
 CREATE FUNCTION TIMKIEM (@MaNV char(10))
 RETURNS NVARCHAR(20)
@@ -250,11 +255,10 @@ BEGIN
 END
 GO
 DECLARE @HOTEN NVARCHAR(20)
-SET @HOTEN = dbo.TIMKIEM('1')
+SET @HOTEN = dbo.TIMKIEM('NV001')
 PRINT @HOTEN
 
 --Hàm tính tongtien (HoaDon) = Tong Tat ca tien co ma hoa don (ChitietHoaDon) + Gia Tien (LoaiPhong)
-
 SELECT * FROM HoaDon
 SELECT * FROM LoaiPhong
 SELECT * FROM Phong
@@ -278,7 +282,6 @@ SET @TongTien = dbo.TINHTONGTIEN(2)
 PRINT @TongTien
 
 --Tạo trigger kiểm tra ngày thuê phải bé hơn ngày trả
-
 GO
 CREATE TRIGGER KT_NGAY
 ON HoaDon
@@ -293,66 +296,18 @@ SELECT * FROM HoaDon
 
 
 --Tạo trigger xóa nhân viên có số tuổi vượt quá quy định
-
 GO
 CREATE TRIGGER XOA_NV ON NhanVien
 FOR DELETE
 AS
-IF(SELECT Year(GETDATE()) - Year(NgaySinh) FROM DELETED) > 60
+IF(SELECT TuoiNV FROM DELETED) > 60
 	ROLLBACK TRAN
-
-drop trigger XOA_NV
-DELETE FROM NhanVien WHERE MaNV = 1
+DELETE FROM NhanVien WHERE MaNV = 'NV005'
 SELECT * FROM NhanVien
 
---Tạo cursor hiển thị tổng số nhân viên tương ứng từng chức vụ
 
-SELECT * FROM NhanVien
-SELECT * FROM ChucVu
-GO
-DECLARE CS_TONGNV CURSOR
-FOR
-SELECT MaCV, TENCV 
-FROM ChucVu
-OPEN CS_TONGNV
-DECLARE @MACV INT, @TENCV NVARCHAR(25), @SLNV INT
-FETCH NEXT FROM CS_TONGNV INTO @MACV,@TENCV
-WHILE (@@FETCH_STATUS = 0)
-BEGIN
-	SELECT @SLNV = COUNT(DISTINCT MaCV)
-	FROM NhanVien
-	WHERE @MACV = MaCV
-	SELECT [Mã chức vụ] = @MACV, [Tên chức vụ] = @TENCV, [Số lượng nhân viên] = @SLNV
-	FETCH NEXT FROM CS_TONGNV INTO @MACV, @TENCV
-END
-CLOSE CS_TONGNV
-DEALLOCATE CS_TONGNV
 
---Tạo cursor hiển thị tổng số giá tiền tương ứng với mã loại dịch vụ
---2001216272-Lê Đức Tú
-SELECT * FROM LoaiDichVu
-SELECT * FROM DichVu
-
-DECLARE CS_HTTIEN CURSOR
-FOR
-SELECT MaLoaiDichVu, TenLoaiDichVu
-FROM LoaiDichVu 
-OPEN CS_HTTIEN
-DECLARE @MALOAIDV INT, @TENLOAIDV NVARCHAR(25), @TONGTIEN FLOAT
-FETCH NEXT FROM CS_HTTIEN INTO @MALOAIDV, @TENLOAIDV
-WHILE( @@FETCH_STATUS = 0)
-BEGIN
-	SELECT @TONGTIEN = SUM(GiaTien)
-	FROM DichVu
-	WHERE @MALOAIDV = MaLoaiDichVu
-	SELECT [Mã loại dịch vụ] = @MALOAIDV, [Tên loại dịch vụ] = @TENLOAIDV, [Tổng tiền] = @TONGTIEN
-	FETCH NEXT FROM CS_HTTIEN INTO @MALOAIDV, @TENLOAIDV
-END
-CLOSE CS_HTTIEN
-DEALLOCATE CS_HTTIEN 
-	
-	
-								
+													
 --Nguyễn Trần Tuấn Huy
 -- Tên Dịch vụ và gói dịch dụ là duy nhất
 ALTER TABLE DichVu
@@ -363,7 +318,6 @@ ADD UNIQUE (TenGoi)
 
 
 --Tạo thủ tục để kiểm tra mật khẩu đã được sử dụng rồi hay chưa khi thực hiện thêm mới nhân viên
-
 GO
 CREATE PROC KT_MK
 @TenNV nvarchar(50),@SDT bigint,@EmailNV varchar(120),@GioiTinh nvarchar(50),@TaiKhoan varchar(150),@MatKhau varchar(150),@TuoiNV tinyint,@NgayVaoLam datetime,@MaCV char(10)
@@ -382,7 +336,6 @@ EXEC KT_MK N'Nguyễn Văn An',0816243565,'An@gmail.com','Nam','An123','An123',1
 
 
 --Tạo thủ tục để kiểm tra tài khoản đã được sử dụng rồi hay chưa khi thực hiện thêm mới nhân viên
-
 GO
 CREATE PROC KT_TK
  @TenNV nvarchar(50),@SDT bigint,@EmailNV varchar(120),@GioiTinh nvarchar(50),@TaiKhoan varchar(150),@MatKhau varchar(150),@TuoiNV tinyint,@NgayVaoLam datetime,@MaCV char(10)
@@ -401,7 +354,6 @@ EXEC KT_TK N'Nguyễn Văn An',0816243565,'An@gmail.com','Nam','An123','An123',1
 
 
 --Tạo hàm tìm kiếm khách hàng
-
 GO
 CREATE FUNCTION TIMKIEMKH (@MaKH char(10))
 RETURNS NVARCHAR(20)
@@ -417,7 +369,6 @@ SET @HOTEN = dbo.TIMKIEMKH(1)
 PRINT @HOTEN
 
 --Tạo hàm tình tien ChiTietHoaDon
-
 SELECT * FROM ChiTietHoaDon
 GO
 CREATE FUNCTION TINHTIEN (@MAHD int)
@@ -437,7 +388,6 @@ SET @Tien = dbo.TINHTIEN(2)
 PRINT @Tien
 
 --Tạo trigger giá không được để số âm
-
 GO
 CREATE TRIGGER KT_GIA
 ON LoaiPhong
@@ -448,61 +398,14 @@ AS
 INSERT INTO LoaiPhong VALUES (N'Đơn',-200)
 
 
--- Tạo trigger số ngày nghỉ quá 10 ngày sẽ trừ 20% lương
-
+-- Tạo trigger số ngày nghỉ không được quá 10 ngày
 GO
 CREATE TRIGGER KT_NgayNghi
 ON Luong
 FOR INSERT,UPDATE
 AS
 	IF (SELECT SoNgayNghi from inserted) > 10
-		update Luong
-		set TienLuong = TienLuong * 0.8
-		where Luong.MaNV = (select MaNV from inserted)
+		ROLLBACK TRAN
 
-drop trigger KT_NgayNghi
-INSERT INTO Luong VALUES (12,10000000,4)
-select* from Luong
---Tạo cursor hiển thị tổng số nhân viên có ngày nghỉ lớn hơn 2 
-
-SELECT * FROM Luong	
-SELECT * FROM NhanVien
-DECLARE CS_SLNV CURSOR
-FOR
-SELECT SoNgayNghi, MaNV 
-FROM Luong
-OPEN CS_SLNV
-DECLARE @Songaynghi int, @MaNV int, @SLNVIEN int
-FETCH NEXT FROM CS_SLNV INTO @Songaynghi, @MaNV
-WHILE (@@FETCH_STATUS = 0)
-BEGIN
-	SELECT @SLNVIEN = COUNT(MaNV)
-	FROM Luong
-	WHERE @MaNV = MaNV AND SoNgayNghi > 2 
-	SELECT [Mã nhân viên] = @MaNV, [Số ngày nghỉ] = @Songaynghi, [Số lượng nhân viên] = @SLNVIEN
-	FETCH NEXT FROM CS_SLNV INTO @Songaynghi, @MaNV
-END
-CLOSE CS_SLNV
-DEALLOCATE CS_SLNV
-
---Tạo cursor hiển thị tổng số nhân viên có ngày nghỉ bé hơn 10
-
-SELECT * FROM Luong	
-SELECT * FROM NhanVien
-DECLARE CS_SLNV CURSOR
-FOR
-SELECT SoNgayNghi, MaNV 
-FROM Luong
-OPEN CS_SLNV
-DECLARE @Songaynghi int, @MaNV int, @SLNVIEN int
-FETCH NEXT FROM CS_SLNV INTO @Songaynghi, @MaNV
-WHILE (@@FETCH_STATUS = 0)
-BEGIN
-	SELECT @SLNVIEN = COUNT(MaNV)
-	FROM Luong
-	WHERE @MaNV = MaNV AND SoNgayNghi < 10 
-	SELECT [Mã nhân viên] = @MaNV, [Số ngày nghỉ] = @Songaynghi, [Số lượng nhân viên] = @SLNVIEN
-	FETCH NEXT FROM CS_SLNV INTO @Songaynghi, @MaNV
-END
-CLOSE CS_SLNV
-DEALLOCATE CS_SLNV												
+INSERT INTO Luong VALUES (12,10000000,'NV001')
+												

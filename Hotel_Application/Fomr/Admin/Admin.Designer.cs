@@ -35,10 +35,10 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
-            this.phong1 = new Hotel_Application.Phong();
             this.nhanSu1 = new Hotel_Application.NhanSu();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
+            this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
+            this.phong1 = new Hotel_Application.Phong();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,13 +47,13 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 1151);
+            this.pictureBox1.Size = new System.Drawing.Size(330, 1151);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnRoom
             // 
-            this.btnRoom.Location = new System.Drawing.Point(77, 269);
+            this.btnRoom.Location = new System.Drawing.Point(77, 295);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Size = new System.Drawing.Size(180, 98);
             this.btnRoom.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Location = new System.Drawing.Point(77, 85);
+            this.btnNhanVien.Location = new System.Drawing.Point(77, 148);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(180, 98);
             this.btnNhanVien.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // btnService
             // 
-            this.btnService.Location = new System.Drawing.Point(77, 474);
+            this.btnService.Location = new System.Drawing.Point(77, 468);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(180, 98);
             this.btnService.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Location = new System.Drawing.Point(77, 664);
+            this.btnHoaDon.Location = new System.Drawing.Point(77, 642);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnHoaDon.TabIndex = 5;
@@ -93,9 +93,9 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(77, 867);
+            this.btnThongKe.Location = new System.Drawing.Point(77, 843);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(180, 98);
+            this.btnThongKe.Size = new System.Drawing.Size(0, 0);
             this.btnThongKe.TabIndex = 7;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -103,37 +103,20 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(-9, 1047);
+            this.btnLogOut.Location = new System.Drawing.Point(-2, 946);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(339, 98);
+            this.btnLogOut.Size = new System.Drawing.Size(330, 98);
             this.btnLogOut.TabIndex = 8;
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // quanLyDichVu1
-            // 
-            this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
-            this.quanLyDichVu1.Name = "quanLyDichVu1";
-            this.quanLyDichVu1.Size = new System.Drawing.Size(1450, 1200);
-            this.quanLyDichVu1.TabIndex = 13;
-           
-            // 
-            // phong1
-            // 
-            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.phong1.Location = new System.Drawing.Point(327, -6);
-            this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1480, 1200);
-            this.phong1.TabIndex = 12;
             // 
             // nhanSu1
             // 
             this.nhanSu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nhanSu1.Location = new System.Drawing.Point(327, -6);
             this.nhanSu1.Name = "nhanSu1";
-            this.nhanSu1.Size = new System.Drawing.Size(1460, 1190);
+            this.nhanSu1.Size = new System.Drawing.Size(1590, 1080);
             this.nhanSu1.TabIndex = 11;
             // 
             // quanLyHoaDon1
@@ -144,15 +127,27 @@
             this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
             this.quanLyHoaDon1.TabIndex = 10;
             // 
+            // quanLyDichVu1
+            // 
+            this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
+            this.quanLyDichVu1.Name = "quanLyDichVu1";
+            this.quanLyDichVu1.Size = new System.Drawing.Size(1450, 1200);
+            this.quanLyDichVu1.TabIndex = 13;
+            // 
+            // phong1
+            // 
+            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.phong1.Location = new System.Drawing.Point(327, -6);
+            this.phong1.Name = "phong1";
+            this.phong1.Size = new System.Drawing.Size(1480, 1200);
+            this.phong1.TabIndex = 12;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1778, 1144);
-            this.Controls.Add(this.quanLyDichVu1);
-            this.Controls.Add(this.phong1);
-            this.Controls.Add(this.nhanSu1);
-            this.Controls.Add(this.quanLyHoaDon1);
+            this.ClientSize = new System.Drawing.Size(1918, 1064);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnHoaDon);
@@ -160,6 +155,10 @@
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnRoom);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.nhanSu1);
+            this.Controls.Add(this.quanLyHoaDon1);
+            this.Controls.Add(this.quanLyDichVu1);
+            this.Controls.Add(this.phong1);
             this.MaximizeBox = false;
             this.Name = "Admin";
             this.Text = "Admin";

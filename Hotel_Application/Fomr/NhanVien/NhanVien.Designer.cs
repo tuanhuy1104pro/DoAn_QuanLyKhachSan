@@ -42,12 +42,13 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(156, 1050);
+            this.btnLogOut.Location = new System.Drawing.Point(156, 923);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(145, 98);
             this.btnLogOut.TabIndex = 13;
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnThongKe
             // 
@@ -115,24 +116,23 @@
             this.trangChu1.Location = new System.Drawing.Point(304, -3);
             this.trangChu1.Margin = new System.Windows.Forms.Padding(0);
             this.trangChu1.Name = "trangChu1";
-            this.trangChu1.Size = new System.Drawing.Size(1460, 1200);
+            this.trangChu1.Size = new System.Drawing.Size(1590, 1080);
             this.trangChu1.TabIndex = 18;
             // 
             // quanLyHoaDon1
             // 
             this.quanLyHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.quanLyHoaDon1.Location = new System.Drawing.Point(310, -3);
+            this.quanLyHoaDon1.Location = new System.Drawing.Point(307, -3);
             this.quanLyHoaDon1.Name = "quanLyHoaDon1";
-            this.quanLyHoaDon1.Size = new System.Drawing.Size(1430, 1200);
+            this.quanLyHoaDon1.Size = new System.Drawing.Size(1590, 1024);
             this.quanLyHoaDon1.TabIndex = 19;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1742, 1144);
+            this.ClientSize = new System.Drawing.Size(1894, 1020);
             this.Controls.Add(this.quanLyHoaDon1);
-            this.Controls.Add(this.trangChu1);
             this.Controls.Add(this.ThemDichVuVaoHoaDon);
             this.Controls.Add(this.btnDangKyHoaDon);
             this.Controls.Add(this.btnLogOut);
@@ -140,6 +140,7 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.trangChu1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "NhanVien";

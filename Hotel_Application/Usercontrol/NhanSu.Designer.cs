@@ -98,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(583, 268);
+            this.label3.Location = new System.Drawing.Point(645, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 46);
             this.label3.TabIndex = 27;
@@ -107,7 +107,7 @@
             // txtPhuCap
             // 
             this.txtPhuCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhuCap.Location = new System.Drawing.Point(785, 268);
+            this.txtPhuCap.Location = new System.Drawing.Point(847, 260);
             this.txtPhuCap.Name = "txtPhuCap";
             this.txtPhuCap.Size = new System.Drawing.Size(465, 39);
             this.txtPhuCap.TabIndex = 26;
@@ -128,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(578, 189);
+            this.label2.Location = new System.Drawing.Point(640, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 46);
             this.label2.TabIndex = 24;
@@ -139,7 +139,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(831, 25);
+            this.label1.Location = new System.Drawing.Point(893, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(419, 55);
             this.label1.TabIndex = 23;
@@ -148,7 +148,7 @@
             // txtTenCV
             // 
             this.txtTenCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenCV.Location = new System.Drawing.Point(785, 196);
+            this.txtTenCV.Location = new System.Drawing.Point(847, 188);
             this.txtTenCV.Name = "txtTenCV";
             this.txtTenCV.Size = new System.Drawing.Size(465, 39);
             this.txtTenCV.TabIndex = 22;
@@ -156,7 +156,7 @@
             // btnAddChucVu
             // 
             this.btnAddChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddChucVu.Location = new System.Drawing.Point(1256, 196);
+            this.btnAddChucVu.Location = new System.Drawing.Point(1318, 188);
             this.btnAddChucVu.Name = "btnAddChucVu";
             this.btnAddChucVu.Size = new System.Drawing.Size(140, 111);
             this.btnAddChucVu.TabIndex = 21;
@@ -167,9 +167,9 @@
             // btnEditNhanSu
             // 
             this.btnEditNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditNhanSu.Location = new System.Drawing.Point(409, 1040);
+            this.btnEditNhanSu.Location = new System.Drawing.Point(1463, 833);
             this.btnEditNhanSu.Name = "btnEditNhanSu";
-            this.btnEditNhanSu.Size = new System.Drawing.Size(172, 111);
+            this.btnEditNhanSu.Size = new System.Drawing.Size(119, 111);
             this.btnEditNhanSu.TabIndex = 44;
             this.btnEditNhanSu.Text = "Sửa";
             this.btnEditNhanSu.UseVisualStyleBackColor = true;
@@ -178,9 +178,9 @@
             // btnDeleteNhanSu
             // 
             this.btnDeleteNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNhanSu.Location = new System.Drawing.Point(205, 1040);
+            this.btnDeleteNhanSu.Location = new System.Drawing.Point(1463, 696);
             this.btnDeleteNhanSu.Name = "btnDeleteNhanSu";
-            this.btnDeleteNhanSu.Size = new System.Drawing.Size(160, 111);
+            this.btnDeleteNhanSu.Size = new System.Drawing.Size(119, 111);
             this.btnDeleteNhanSu.TabIndex = 43;
             this.btnDeleteNhanSu.Text = "Xóa";
             this.btnDeleteNhanSu.UseVisualStyleBackColor = true;
@@ -189,9 +189,9 @@
             // btnAddNhanSu
             // 
             this.btnAddNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNhanSu.Location = new System.Drawing.Point(6, 1040);
+            this.btnAddNhanSu.Location = new System.Drawing.Point(1463, 551);
             this.btnAddNhanSu.Name = "btnAddNhanSu";
-            this.btnAddNhanSu.Size = new System.Drawing.Size(162, 111);
+            this.btnAddNhanSu.Size = new System.Drawing.Size(119, 111);
             this.btnAddNhanSu.TabIndex = 42;
             this.btnAddNhanSu.Text = "Thêm";
             this.btnAddNhanSu.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             this.lbTimNhanSu.AutoSize = true;
             this.lbTimNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimNhanSu.ForeColor = System.Drawing.Color.White;
-            this.lbTimNhanSu.Location = new System.Drawing.Point(1214, 1068);
+            this.lbTimNhanSu.Location = new System.Drawing.Point(1263, 1010);
             this.lbTimNhanSu.Name = "lbTimNhanSu";
             this.lbTimNhanSu.Size = new System.Drawing.Size(195, 46);
             this.lbTimNhanSu.TabIndex = 45;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.txtTenCV);
             this.Controls.Add(this.btnAddChucVu);
             this.Name = "NhanSu";
-            this.Size = new System.Drawing.Size(1460, 1190);
+            this.Size = new System.Drawing.Size(1590, 1080);
             this.Load += new System.EventHandler(this.NhanSu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanSu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).EndInit();
