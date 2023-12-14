@@ -75,7 +75,7 @@ namespace Hotel_Application.Usercontrol
             daDV.Update(dsDichVu, "DichVu");
             SoluongdongDichVu--;
             MessageBox.Show($"Đã xóa dịch vụ {tendichvu}");
-            QuanLyDichVu_Load(null, EventArgs.Empty);
+            
         }
         int MaDichVu;
         private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -101,7 +101,7 @@ namespace Hotel_Application.Usercontrol
             }
             catch (Exception)
             {
-
+                conn.Close();
                 MessageBox.Show("Đã tồn tại gói");
             }
 
@@ -224,14 +224,43 @@ namespace Hotel_Application.Usercontrol
 
         private void btnEditGoiService_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand($"Update GoiDichVu Set KhuyenMai = {float.Parse(txtKhuyenMaiGoi.Text)}  where TenGoi =  N'{cboGoiService.SelectedItem.ToString()}'", conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show($"Đã Cập nhật gói {cboGoiService.SelectedItem.ToString()}");
+                dschitietgoi.Clear();
+                LoadDetailGoiService();
+            }
+            catch (Exception)
+            {
+                conn.Close();
+                MessageBox.Show("Không tìm thấy gói");
+            }
         }
 
         private void btnDeleteGoiService_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand($"Delete from GoiDichVu where TenGoi =  N'{cboGoiService.SelectedItem.ToString()}'", conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show($"Đã Xóa gói {cboGoiService.SelectedItem.ToString()}");
+                cboGoiService.Items.Remove(cboGoiService.SelectedItem);
+                cboGoiService.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                conn.Close();
+                MessageBox.Show("Lỗi");
+            }
         }
 
+       
 
 
 

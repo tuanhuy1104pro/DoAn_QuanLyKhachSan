@@ -52,6 +52,7 @@
     <Compile Include="AddDichVu.Designer.cs">
       <DependentUpon>AddDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Class\ChucNang.cs" />
     <Compile Include="Fomr\Admin\EditNhanSu.cs">
       <SubType>Form</SubType>
     </Compile>

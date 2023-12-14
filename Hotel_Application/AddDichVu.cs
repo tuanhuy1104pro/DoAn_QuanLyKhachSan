@@ -1,4 +1,5 @@
 ﻿using Hotel_Application.Features;
+using Hotel_Application.Features.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,14 +54,21 @@ namespace Hotel_Application
         {
             conn.Open();
              
-           
-            //
-            int maloaidichvu = MaLoaiDV[cboLoaiService.SelectedIndex];
-            SqlCommand cmd = new SqlCommand($"Insert into DichVu(TenDichVu,GiaTien,MaLoaiDichVu) values ('{txtTenDichVu.Text}',{txtGiaTien.Text},{maloaidichvu})",conn);
-            cmd.ExecuteNonQuery();
+           if(ChucNang.IsAllDigits(txtGiaTien.Text) == false)
+            {
+                conn.Close() ;
+                MessageBox.Show("Giá Tiền Không Hợp Lệ");
+            }
+           else {
+                int maloaidichvu = MaLoaiDV[cboLoaiService.SelectedIndex];
+                SqlCommand cmd = new SqlCommand($"Insert into DichVu(TenDichVu,GiaTien,MaLoaiDichVu) values ('{txtTenDichVu.Text}',{txtGiaTien.Text},{maloaidichvu})", conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
-            this.Close();
+                conn.Close();
+                this.Close();
+            }
+            //
+           
             
         }
         //ComboBoxLoaiDichVu

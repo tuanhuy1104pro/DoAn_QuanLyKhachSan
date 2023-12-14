@@ -44,6 +44,7 @@ namespace Hotel_Application
                 bool flag = rdr.Read();
                 if(flag == false)
                 {
+                    conn.Close();
                     MessageBox.Show("Không có chức vụ để thêm");
                 }
                 else

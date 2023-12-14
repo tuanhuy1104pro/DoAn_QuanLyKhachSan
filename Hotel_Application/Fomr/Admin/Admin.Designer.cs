@@ -39,6 +39,7 @@
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
             this.phong1 = new Hotel_Application.Phong();
+            this.btnTK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             // btnRoom
             // 
-            this.btnRoom.Location = new System.Drawing.Point(77, 295);
+            this.btnRoom.Location = new System.Drawing.Point(77, 236);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Size = new System.Drawing.Size(180, 98);
             this.btnRoom.TabIndex = 2;
@@ -63,7 +64,7 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Location = new System.Drawing.Point(77, 148);
+            this.btnNhanVien.Location = new System.Drawing.Point(77, 73);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(180, 98);
             this.btnNhanVien.TabIndex = 3;
@@ -73,7 +74,7 @@
             // 
             // btnService
             // 
-            this.btnService.Location = new System.Drawing.Point(77, 468);
+            this.btnService.Location = new System.Drawing.Point(77, 411);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(180, 98);
             this.btnService.TabIndex = 4;
@@ -83,7 +84,7 @@
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Location = new System.Drawing.Point(77, 642);
+            this.btnHoaDon.Location = new System.Drawing.Point(77, 594);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnHoaDon.TabIndex = 5;
@@ -143,11 +144,21 @@
             this.phong1.Size = new System.Drawing.Size(1590, 1080);
             this.phong1.TabIndex = 12;
             // 
+            // btnTK
+            // 
+            this.btnTK.Location = new System.Drawing.Point(77, 779);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Size = new System.Drawing.Size(180, 98);
+            this.btnTK.TabIndex = 14;
+            this.btnTK.Text = "Thống Kê";
+            this.btnTK.UseVisualStyleBackColor = true;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1918, 1064);
+            this.Controls.Add(this.btnTK);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnHoaDon);
@@ -181,5 +192,6 @@
         private NhanSu nhanSu1;
         private Phong phong1;
         private Usercontrol.QuanLyDichVu quanLyDichVu1;
+        private System.Windows.Forms.Button btnTK;
     }
 }

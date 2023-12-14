@@ -67,30 +67,47 @@ namespace Hotel_Application
             {
                 conn.Open();
             }
-
-            try
+           
+            SqlCommand cmd = new SqlCommand($"Select MaCV from ChucVu Where TenCV = N'{txtTenCV.Text}'", conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            bool check = reader.Read();
+            reader.Close();
+            if(txtTenCV.Text.Length == 0 || txtPhuCap.Text.Length == 0)
             {
-                SqlCommand cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
-                cmd.ExecuteNonQuery();
-
-
-                MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
-                txtTenCV.Clear();
-                txtPhuCap.Clear();
+                conn.Close() ;
+                MessageBox.Show("Cần phải nhập đầy đủ thông tin");
             }
-            catch (Exception)
+            else if(ChucNang.IsAllDigits(txtPhuCap.Text) == false)
             {
-                MessageBox.Show("Đã tồn tạo chức vụ");
-                
+                conn.Close();
+                MessageBox.Show("Giá Trị Phụ cấp không hợp lệ");
+            }    
+            else
+            {
+                if (check == false)
+                {
+                    cmd = new SqlCommand($"insert into ChucVu(TenCV,PhuCap) values (N'{txtTenCV.Text}','{float.Parse(txtPhuCap.Text)}')", conn);
+                    cmd.ExecuteNonQuery();
+
+
+                    MessageBox.Show($"Đã thêm chức vụ {txtTenCV.Text}");
+                    txtTenCV.Clear();
+                    txtPhuCap.Clear();
+                    conn.Close();
+                    dataSet.Clear();
+                    loadBangChucVu();
+                }
+                else
+                {
+                    conn.Close();
+                    MessageBox.Show($"Đã Tồn Tại chức vụ {txtTenCV.Text}");
+                }
             }
-            
+           
+                  
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
-        {
-            loadBangChucVu();
-        }
-        //
+        
         public int maCV;
         
         private void btnDeleteChucVu_Click(object sender, EventArgs e)
@@ -122,7 +139,7 @@ namespace Hotel_Application
         private void btnEditChucVu_Click(object sender, EventArgs e)
         {
             
-            
+                
                 rowFlag = dataSet.Tables["ChucVu"].Rows.Find(maCV);
                 EditChucVu edit = new EditChucVu();
                 edit.Show();
@@ -179,11 +196,13 @@ namespace Hotel_Application
                         SqlCommand cmd = new SqlCommand($"INSERT INTO  NhanVien VALUES(N'{addns.txtHoTen.Text}',{int.Parse(addns.txtSdt.Text)},'{addns.txtEmail.Text}',N'{addns.cboGioiTinh.SelectedItem.ToString()}','{addns.txtTaiKhoan.Text}','{addns.txtMatKhau.Text}','{addns.dtDoBorn.Text}','{addns.DtNgayVaoLam.Text}',{int.Parse(addns.txtMaChucVu.Text)})", conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show($"Đã thêm nhân viên");
+                        conn.Close();
                     }
-                    conn.Close();
+                    
                 }
                 catch {
                     MessageBox.Show("LỖi");
+                    conn.Close();
                 }
             };  
         }
@@ -233,6 +252,40 @@ namespace Hotel_Application
                 SqlCommandBuilder cb = new SqlCommandBuilder(daNhanVien);
                 daNhanVien.Update(dsNhanvien, "NhanVien");
             };
+        }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "Nhập Họ Tên Nhân Viên Hoặc SĐT";
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Clear();
+        }
+
+        private void lbTimNhanSu_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            
+            
+            if (ChucNang.IsAllDigits(txtTimKiem.Text))
+            {
+                dsNhanvien.Clear();
+                SqlDataAdapter da = new SqlDataAdapter($"select*from NhanVien\r\nwhere NhanVien.SDT ={txtTimKiem.Text}", conn);
+                da.Fill(dsNhanvien, "NhanVien");
+                conn.Close();
+                soluongdongNhanSu = 1;
+            }
+            else
+            {
+                dsNhanvien.Clear();
+                SqlDataAdapter da = new SqlDataAdapter($"select*from NhanVien\r\nwhere NhanVien.TenNV =N'{txtTimKiem.Text}'", conn);
+                da.Fill(dsNhanvien, "NhanVien");
+                conn.Close();
+                soluongdongNhanSu = 1;
+            }
+
         }
         //Nhân Viên
     }

@@ -86,6 +86,7 @@
             this.dgvDichVu.RowTemplate.Height = 28;
             this.dgvDichVu.Size = new System.Drawing.Size(721, 126);
             this.dgvDichVu.TabIndex = 56;
+            this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
             // 
             // txtKhuyenMaiGoi
             // 

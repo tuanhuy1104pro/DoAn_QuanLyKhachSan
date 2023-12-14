@@ -43,8 +43,8 @@
             this.btnDeleteNhanSu = new System.Windows.Forms.Button();
             this.btnAddNhanSu = new System.Windows.Forms.Button();
             this.lbTimNhanSu = new System.Windows.Forms.Label();
-            this.btnReload = new System.Windows.Forms.Button();
             this.btnReloadNhanSu = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).BeginInit();
             this.SuspendLayout();
@@ -178,7 +178,7 @@
             // btnDeleteNhanSu
             // 
             this.btnDeleteNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNhanSu.Location = new System.Drawing.Point(1463, 696);
+            this.btnDeleteNhanSu.Location = new System.Drawing.Point(1463, 701);
             this.btnDeleteNhanSu.Name = "btnDeleteNhanSu";
             this.btnDeleteNhanSu.Size = new System.Drawing.Size(119, 111);
             this.btnDeleteNhanSu.TabIndex = 43;
@@ -207,17 +207,7 @@
             this.lbTimNhanSu.Size = new System.Drawing.Size(195, 46);
             this.lbTimNhanSu.TabIndex = 45;
             this.lbTimNhanSu.Text = "Tìm Kiếm";
-            // 
-            // btnReload
-            // 
-            this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(205, 17);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(137, 63);
-            this.btnReload.TabIndex = 46;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            this.lbTimNhanSu.Click += new System.EventHandler(this.lbTimNhanSu_Click);
             // 
             // btnReloadNhanSu
             // 
@@ -230,13 +220,24 @@
             this.btnReloadNhanSu.UseVisualStyleBackColor = true;
             this.btnReloadNhanSu.Click += new System.EventHandler(this.btnReloadNhanSu_Click);
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(792, 1015);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(465, 39);
+            this.txtTimKiem.TabIndex = 48;
+            this.txtTimKiem.Text = "Nhập Họ Tên Nhân Viên Hoặc SĐT";
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
+            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
+            // 
             // NhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnReloadNhanSu);
-            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.lbTimNhanSu);
             this.Controls.Add(this.btnEditNhanSu);
             this.Controls.Add(this.btnDeleteNhanSu);
@@ -277,8 +278,8 @@
         private System.Windows.Forms.Button btnDeleteNhanSu;
         private System.Windows.Forms.Button btnAddNhanSu;
         private System.Windows.Forms.Label lbTimNhanSu;
-        private System.Windows.Forms.Button btnReload;
         public System.Windows.Forms.DataGridView dgvChucVu;
         private System.Windows.Forms.Button btnReloadNhanSu;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }
