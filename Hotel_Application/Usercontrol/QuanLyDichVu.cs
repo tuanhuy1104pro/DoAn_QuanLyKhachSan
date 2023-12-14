@@ -1,4 +1,5 @@
 ﻿using Hotel_Application.Features;
+using Hotel_Application.Features.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,16 +66,24 @@ namespace Hotel_Application.Usercontrol
 
         private void btnDeleteService_Click(object sender, EventArgs e)
         {
-            DataRow dr = dsDichVu.Tables["DichVu"].Rows.Find(MaDichVu);
-            string tendichvu = dr["TenDichVu"].ToString();
-            if (dr != null)
+            try
             {
-                dr.Delete();
+                DataRow dr = dsDichVu.Tables["DichVu"].Rows.Find(MaDichVu);
+                string tendichvu = dr["TenDichVu"].ToString();
+                if (dr != null)
+                {
+                    dr.Delete();
+                }
+                SqlCommandBuilder cb = new SqlCommandBuilder(daDV);
+                daDV.Update(dsDichVu, "DichVu");
+                SoluongdongDichVu--;
+                MessageBox.Show($"Đã xóa dịch vụ {tendichvu}");
             }
-            SqlCommandBuilder cb = new SqlCommandBuilder(daDV);
-            daDV.Update(dsDichVu, "DichVu");
-            SoluongdongDichVu--;
-            MessageBox.Show($"Đã xóa dịch vụ {tendichvu}");
+            catch (Exception)
+            {
+                MessageBox.Show($"Không thể xóa dịch vụ"); 
+            }
+            
             
         }
         int MaDichVu;
@@ -259,10 +268,6 @@ namespace Hotel_Application.Usercontrol
                 MessageBox.Show("Lỗi");
             }
         }
-
-       
-
-
 
         //DỊch vụ
     }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEditService = new System.Windows.Forms.Button();
             this.btnDeleteService = new System.Windows.Forms.Button();
             this.dgvDichVu = new System.Windows.Forms.DataGridView();
             this.txtKhuyenMaiGoi = new System.Windows.Forms.TextBox();
@@ -56,20 +55,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailGoiService)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnEditService
-            // 
-            this.btnEditService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditService.Location = new System.Drawing.Point(1049, 269);
-            this.btnEditService.Name = "btnEditService";
-            this.btnEditService.Size = new System.Drawing.Size(108, 86);
-            this.btnEditService.TabIndex = 61;
-            this.btnEditService.Text = "Sửa";
-            this.btnEditService.UseVisualStyleBackColor = true;
-            // 
             // btnDeleteService
             // 
             this.btnDeleteService.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteService.Location = new System.Drawing.Point(751, 269);
+            this.btnDeleteService.Location = new System.Drawing.Point(1049, 269);
             this.btnDeleteService.Name = "btnDeleteService";
             this.btnDeleteService.Size = new System.Drawing.Size(108, 86);
             this.btnDeleteService.TabIndex = 60;
@@ -331,7 +320,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnEditService);
             this.Controls.Add(this.btnDeleteService);
             this.Controls.Add(this.btnAddService);
             this.Controls.Add(this.dgvDichVu);
@@ -349,7 +337,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnEditService;
         private System.Windows.Forms.Button btnDeleteService;
         private System.Windows.Forms.DataGridView dgvDichVu;
         private System.Windows.Forms.TextBox txtKhuyenMaiGoi;

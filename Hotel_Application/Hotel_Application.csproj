@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddDichVu.cs">
+    <Compile Include="TaoHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaoHoaDon.Designer.cs">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\AddDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddDichVu.Designer.cs">
+    <Compile Include="Usercontrol\AddDichVu.Designer.cs">
       <DependentUpon>AddDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Class\ChucNang.cs" />
@@ -94,12 +100,6 @@
     <Compile Include="Fomr\NhanVien\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.Designer.cs">
-      <DependentUpon>TaoHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usercontrol\QuanLyHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,7 +138,10 @@
     <Compile Include="Fomr\ĐangKyDangNhap\QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddDichVu.resx">
+    <EmbeddedResource Include="TaoHoaDon.resx">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\AddDichVu.resx">
       <DependentUpon>AddDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fomr\Admin\EditNhanSu.resx">
@@ -158,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fomr\NhanVien\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fomr\NhanVien\Usercontrol\TaoHoaDon.resx">
-      <DependentUpon>TaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\QuanLyHoaDon.resx">
       <DependentUpon>QuanLyHoaDon.cs</DependentUpon>

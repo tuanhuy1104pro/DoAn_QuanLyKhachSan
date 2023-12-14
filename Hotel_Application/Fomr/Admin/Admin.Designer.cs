@@ -35,11 +35,11 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnTK = new System.Windows.Forms.Button();
             this.nhanSu1 = new Hotel_Application.NhanSu();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
             this.phong1 = new Hotel_Application.Phong();
-            this.btnTK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             this.btnThongKe.TabIndex = 7;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            
             // 
             // btnLogOut
             // 
@@ -111,6 +111,16 @@
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnTK
+            // 
+            this.btnTK.Location = new System.Drawing.Point(77, 779);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Size = new System.Drawing.Size(180, 98);
+            this.btnTK.TabIndex = 14;
+            this.btnTK.Text = "Thống Kê";
+            this.btnTK.UseVisualStyleBackColor = true;
+            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
             // nhanSu1
             // 
@@ -143,15 +153,6 @@
             this.phong1.Name = "phong1";
             this.phong1.Size = new System.Drawing.Size(1590, 1080);
             this.phong1.TabIndex = 12;
-            // 
-            // btnTK
-            // 
-            this.btnTK.Location = new System.Drawing.Point(77, 779);
-            this.btnTK.Name = "btnTK";
-            this.btnTK.Size = new System.Drawing.Size(180, 98);
-            this.btnTK.TabIndex = 14;
-            this.btnTK.Text = "Thống Kê";
-            this.btnTK.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 

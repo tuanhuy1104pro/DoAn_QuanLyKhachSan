@@ -52,24 +52,32 @@ namespace Hotel_Application
         SqlDataAdapter daDichVu;
         private void btnCreateService_Click(object sender, EventArgs e)
         {
-            conn.Open();
-             
-           if(ChucNang.IsAllDigits(txtGiaTien.Text) == false)
+            try
             {
-                conn.Close() ;
-                MessageBox.Show("Giá Tiền Không Hợp Lệ");
-            }
-           else {
-                int maloaidichvu = MaLoaiDV[cboLoaiService.SelectedIndex];
-                SqlCommand cmd = new SqlCommand($"Insert into DichVu(TenDichVu,GiaTien,MaLoaiDichVu) values ('{txtTenDichVu.Text}',{txtGiaTien.Text},{maloaidichvu})", conn);
-                cmd.ExecuteNonQuery();
+                conn.Open();
+                if (ChucNang.IsAllDigits(txtGiaTien.Text) == false)
+                {
+                    conn.Close();
+                    MessageBox.Show("Giá Tiền Không Hợp Lệ");
+                }
+                else
+                {
+                    int maloaidichvu = MaLoaiDV[cboLoaiService.SelectedIndex];
+                    SqlCommand cmd = new SqlCommand($"Insert into DichVu(TenDichVu,GiaTien,MaLoaiDichVu) values ('{txtTenDichVu.Text}',{txtGiaTien.Text},{maloaidichvu})", conn);
+                    cmd.ExecuteNonQuery();
 
-                conn.Close();
-                this.Close();
+                    conn.Close();
+                    this.Close();
+                }
+                //
             }
-            //
-           
-            
+            catch (Exception)
+            {
+                MessageBox.Show("Đã tồn tại Dịch vụ");
+                conn.Close();
+                
+            }
+         
         }
         //ComboBoxLoaiDichVu
     }

@@ -35,8 +35,8 @@ namespace Hotel_Application
             btnService.ForeColor = Color.Black;
             btnHoaDon.BackColor = Color.Transparent;
             btnHoaDon.ForeColor = Color.Black;
-            btnThongKe.BackColor = Color.Transparent;
-            btnThongKe.ForeColor = Color.Black;
+            btnTK.BackColor = Color.Transparent;
+            btnTK.ForeColor = Color.Black;
 
             btnRoom.BackColor = Color.Gray;
             btnRoom.ForeColor= Color.White;
@@ -56,8 +56,8 @@ namespace Hotel_Application
             btnService.ForeColor = Color.Black;
             btnHoaDon.BackColor = Color.Transparent;
             btnHoaDon.ForeColor = Color.Black;
-            btnThongKe.BackColor = Color.Transparent;
-            btnThongKe.ForeColor = Color.Black;
+            btnTK.BackColor = Color.Transparent;
+            btnTK.ForeColor = Color.Black;
 
             btnNhanVien.BackColor = Color.Gray;
             btnNhanVien.ForeColor = Color.White;
@@ -76,8 +76,8 @@ namespace Hotel_Application
           
             btnHoaDon.BackColor = Color.Transparent;
             btnHoaDon.ForeColor = Color.Black;
-            btnThongKe.BackColor = Color.Transparent;
-            btnThongKe.ForeColor = Color.Black;
+            btnTK.BackColor = Color.Transparent;
+            btnTK.ForeColor = Color.Black;
 
             btnService.BackColor = Color.Gray;
             btnService.ForeColor = Color.White;
@@ -95,9 +95,9 @@ namespace Hotel_Application
             btnNhanVien.ForeColor = Color.Black;
             btnService.BackColor = Color.Transparent;
             btnService.ForeColor = Color.Black;
-           
-            btnThongKe.BackColor = Color.Transparent;
-            btnThongKe.ForeColor = Color.Black;
+
+            btnTK.BackColor = Color.Transparent;
+            btnTK.ForeColor = Color.Black;
 
             btnHoaDon.BackColor = Color.Gray;
             btnHoaDon.ForeColor = Color.White;
@@ -106,9 +106,13 @@ namespace Hotel_Application
             quanLyHoaDon1.BringToFront();
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
-            //UI Feature Button
+            this.Close();
+        }
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
             btnRoom.BackColor = Color.Transparent;
             btnRoom.ForeColor = Color.Black;
             btnNhanVien.BackColor = Color.Transparent;
@@ -117,18 +121,10 @@ namespace Hotel_Application
             btnService.ForeColor = Color.Black;
             btnHoaDon.BackColor = Color.Transparent;
             btnHoaDon.ForeColor = Color.Black;
-            
 
-            btnThongKe.BackColor = Color.Gray;
-            btnThongKe.ForeColor = Color.White;
-            //UI Feature Button
+
+            btnTK.BackColor = Color.Gray;
+            btnTK.ForeColor = Color.White;
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }
 }
