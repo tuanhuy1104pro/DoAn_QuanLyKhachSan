@@ -122,9 +122,9 @@
             // quanLyHoaDon1
             // 
             this.quanLyHoaDon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.quanLyHoaDon1.Location = new System.Drawing.Point(336, -6);
+            this.quanLyHoaDon1.Location = new System.Drawing.Point(328, -5);
             this.quanLyHoaDon1.Name = "quanLyHoaDon1";
-            this.quanLyHoaDon1.Size = new System.Drawing.Size(1440, 1200);
+            this.quanLyHoaDon1.Size = new System.Drawing.Size(1590, 1080);
             this.quanLyHoaDon1.TabIndex = 10;
             // 
             // quanLyDichVu1
@@ -132,7 +132,7 @@
             this.quanLyDichVu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.quanLyDichVu1.Location = new System.Drawing.Point(326, -6);
             this.quanLyDichVu1.Name = "quanLyDichVu1";
-            this.quanLyDichVu1.Size = new System.Drawing.Size(1450, 1200);
+            this.quanLyDichVu1.Size = new System.Drawing.Size(1590, 1080);
             this.quanLyDichVu1.TabIndex = 13;
             // 
             // phong1
@@ -140,7 +140,7 @@
             this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.phong1.Location = new System.Drawing.Point(327, -6);
             this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1480, 1200);
+            this.phong1.Size = new System.Drawing.Size(1590, 1080);
             this.phong1.TabIndex = 12;
             // 
             // Admin
@@ -159,6 +159,7 @@
             this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.quanLyDichVu1);
             this.Controls.Add(this.phong1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Admin";
             this.Text = "Admin";
