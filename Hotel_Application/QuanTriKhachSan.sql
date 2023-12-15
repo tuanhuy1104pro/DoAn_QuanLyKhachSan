@@ -188,11 +188,17 @@ SELECT * FROM Luong
 
 DBCC CHECKIDENT('HoaDon', RESEED, 0)
 SET DATEFORMAT DMY
-INSERT INTO HoaDon (NgayThue,NgayTra,TongTien,MaKhachHang,MaNV,MaPhong) VALUES ('19/11/2023','23/11/2023',450,1,1,2),
-													('20/11/2023','24/11/2023',500,2,2,1),
-													('21/11/2023','26/11/2023',600,3,3,2)
+INSERT INTO HoaDon (NgayThue,NgayTra,TongTien,MaKhachHang,MaNV,MaPhong) VALUES (19/11/2023,23/11/2023,450,1,1,2),
+													(20/11/2023,24/11/2023,500,2,2,1),
+													(21/11/2023,26/11/2023,600,3,3,2)
 SELECT * FROM HoaDon
 DELETE from HoaDon
+
+select * from HoaDon
+Select * from Phong
+
+select  * from Phong where ((Phong.MaLoaiPhong = 2) and (Phong.MaPhong not in (Select MaPhong from HoaDon))) or ((Phong.MaLoaiPhong = 2) and (Select HoaDon.NgayTra from HoaDon where Phong.MaPhong = HoaDon.MaPhong and HoaDon.NgayTra <= '12/25/2023')<= '12/25/2023')
+
 
 INSERT INTO ChiTietHoaDon VALUES (1,2,100),
 								(2,3,100),

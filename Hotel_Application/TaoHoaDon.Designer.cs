@@ -78,6 +78,7 @@
             this.btnXacNhan.TabIndex = 84;
             this.btnXacNhan.Text = "Xác Nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // label3
             // 
@@ -100,6 +101,7 @@
             this.NgayThue.Name = "NgayThue";
             this.NgayThue.Size = new System.Drawing.Size(540, 35);
             this.NgayThue.TabIndex = 82;
+            this.NgayThue.ValueChanged += new System.EventHandler(this.NgayThue_ValueChanged);
             // 
             // cboPhong
             // 
@@ -110,6 +112,7 @@
             this.cboPhong.Name = "cboPhong";
             this.cboPhong.Size = new System.Drawing.Size(126, 37);
             this.cboPhong.TabIndex = 81;
+            this.cboPhong.SelectedIndexChanged += new System.EventHandler(this.cboPhong_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -208,7 +211,6 @@
             this.cboLoaiPhong.Size = new System.Drawing.Size(126, 37);
             this.cboLoaiPhong.TabIndex = 94;
             this.cboLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cboLoaiPhong_SelectedIndexChanged);
-           
             // 
             // label7
             // 

@@ -53,25 +53,64 @@ namespace Hotel_Application
             DataSet dsPhong = new DataSet();
             MaPhong.Clear();
             conn.Open();
-            daPhong = new SqlDataAdapter($"Select* From Phong where MaLoaiPhong = {IMaLoaiPhong} ", conn);
-            daPhong.Fill(dsPhong, "Phong");
-            conn.Close();
+            daPhong = new SqlDataAdapter($"select * from Phong where ((Phong.MaLoaiPhong = {IMaLoaiPhong}) and (Phong.MaPhong not in (Select MaPhong from HoaDon))) or ((Phong.MaLoaiPhong = {IMaLoaiPhong}) and (Select  HoaDon.NgayTra from HoaDon where Phong.MaPhong = HoaDon.MaPhong and HoaDon.NgayTra <= '{NgayThue.Text}') <= '{NgayThue.Text}')", conn);
            
-            foreach (DataRow item in dsPhong.Tables["Phong"].Rows)
-            {
-                cboPhong.Items.Add(item["TenPhong"].ToString());
-                MaPhong.Add(int.Parse(item["MaPhong"].ToString()));
-            }
+           
+                daPhong.Fill(dsPhong, "Phong");
+                conn.Close();
+
+                foreach (DataRow item in dsPhong.Tables["Phong"].Rows)
+                {
+                    cboPhong.Items.Add(item["TenPhong"].ToString());
+                    MaPhong.Add(int.Parse(item["MaPhong"].ToString()));
+                }
+            
+            
         }
-       
+        int IMaLoaiPhong;
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            int IMaLoaiPhong = MaLoaiPhong[cboLoaiPhong.SelectedIndex];
+             IMaLoaiPhong = MaLoaiPhong[cboLoaiPhong.SelectedIndex];
             //
             cboPhong.Items.Clear();
             LoadCboPhong(IMaLoaiPhong);
             cboPhong.SelectedIndex = 0;
+        }
+
+        private void NgayThue_ValueChanged(object sender, EventArgs e)
+        {
+            cboPhong.Items.Clear();
+            LoadCboPhong(IMaLoaiPhong);
+            cboPhong.SelectedIndex = 0;
+        }
+        int IMaPhong;
+        private void cboPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IMaPhong = MaPhong[cboPhong.SelectedIndex];
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            //Kiem Tra Khac hHang
+            conn.Open();
+            SqlCommand cmdKH = new SqlCommand($"Select *From KhachHang where KhachHang.SoDienThoai = {txtSdt.Text} or KhachHang.Email = '{txtEmail.Text}'  ", conn);
+            SqlDataReader readerKH = cmdKH.ExecuteReader();
+            bool check = readerKH.Read();
+            //
+            if (check) { 
+                int MaKH = int.Parse(readerKH["MaKhachHang"].ToString());
+                readerKH.Close();
+                SqlCommand cmdHoaDon = new SqlCommand($"insert into HoaDon(NgayThue,NgayTra,MaNV,MaKhachHang,MaPhong) values ('{NgayThue.Text}','{NgayTra.Text}',{DangKyDangNhap.DoiTuongNV.MaNV},{MaKH},{IMaPhong})", conn);
+                cmdHoaDon.ExecuteNonQuery();
+                MessageBox.Show("Da them thanh cong");
+                conn.Close();
+            }
+
+
+
+            
+           
         }
     }
 }
