@@ -45,6 +45,8 @@ namespace Hotel_Application
             btnDangKyHoaDon.BackColor = Color.Gray;
             btnDangKyHoaDon.ForeColor = Color.White;
             //
+            taoHoaDon1.Show();
+            taoHoaDon1.BringToFront() ;
             
         }
 

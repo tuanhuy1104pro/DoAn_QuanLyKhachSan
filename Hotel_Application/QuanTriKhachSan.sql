@@ -86,8 +86,6 @@ Create table KhachHang
 	DiaChi nvarchar(50),
 	SoDienThoai varchar(30) unique,--
 	Email varchar(50) not null,--
-	TaiKhoan varchar(50) unique not null,
-	MatKhau varchar(50) not null
 )--Bắt buộc phải có Email, họ tên - địa chỉ
 create table HoaDon
 (
@@ -160,9 +158,9 @@ SELECT * FROM Phong
 DELETE from Phong
 --
 DBCC CHECKIDENT('KhachHang', RESEED, 0)
-INSERT INTO KhachHang VALUES (N'Nguyễn Thị Linh','TP.HCM',0316243505,'Linh@gmail.com','Linh123','Linh123'),
-							(N'Nguyễn Văn Toàn',N'Hà Nội',0316987505,'Toan@gmail.com','Toan123','Toan123'),
-							(N'Nguyễn Thị Yến','TP.HCM',0917689205,'Yen@gmail.com','Yen123','Yen123')
+INSERT INTO KhachHang VALUES (N'Nguyễn Thị Linh','TP.HCM',0316243505,'Linh@gmail.com'),
+							(N'Nguyễn Văn Toàn',N'Hà Nội',0316987505,'Toan@gmail.com'),
+							(N'Nguyễn Thị Yến','TP.HCM',0917689205,'Yen@gmail.com')
 SELECT * FROM KhachHang
 delete from KhachHang
 --
