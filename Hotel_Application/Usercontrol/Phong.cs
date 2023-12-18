@@ -230,5 +230,14 @@ namespace Hotel_Application
                 daPhong.Update(dsPhong, "Phong");
             };
         }
+
+        private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < SoluongdongPhong - 1)
+            {
+                DataGridViewRow row = this.dgvPhong.Rows[e.RowIndex];
+                maPhong = int.Parse(row.Cells["MaPhong"].Value.ToString());
+            }
+        }
     }
 }

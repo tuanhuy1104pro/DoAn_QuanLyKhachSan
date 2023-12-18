@@ -193,6 +193,7 @@
             this.dgvPhong.RowTemplate.Height = 28;
             this.dgvPhong.Size = new System.Drawing.Size(1306, 318);
             this.dgvPhong.TabIndex = 15;
+            this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
             // label5
             // 
