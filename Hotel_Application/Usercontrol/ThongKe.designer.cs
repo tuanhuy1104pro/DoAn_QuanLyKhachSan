@@ -56,6 +56,7 @@
             this.cboSearch.Name = "cboSearch";
             this.cboSearch.Size = new System.Drawing.Size(455, 28);
             this.cboSearch.TabIndex = 55;
+            this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.cboSearch_SelectedIndexChanged_1);
             // 
             // txtSearch
             // 

@@ -24,8 +24,12 @@ namespace Hotel_Application.Usercontrol
             InitializeComponent();
         }
 
+        private void ThongKe_Load(object sender, EventArgs e)
+        {
+            cboSearch.SelectedIndex = 0;
+        }
 
-        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboSearch_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cboSearch.SelectedIndex == 0)
             {
@@ -57,11 +61,6 @@ namespace Hotel_Application.Usercontrol
                 dataGridView1.DataSource = dataSet.Tables["KhachHang"];
                 conn.Close();
             }
-        }
-
-        private void ThongKe_Load(object sender, EventArgs e)
-        {
-            cboSearch.SelectedIndex = 0;
         }
     }
 }

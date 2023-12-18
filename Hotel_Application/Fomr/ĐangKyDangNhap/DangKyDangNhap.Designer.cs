@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKyDangNhap));
             this.theme = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +43,8 @@
             // 
             // theme
             // 
-            this.theme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(255)))), ((int)(((byte)(244)))));
-            this.theme.Location = new System.Drawing.Point(-2, 1);
+            this.theme.BackColor = System.Drawing.Color.White;
+            this.theme.Location = new System.Drawing.Point(-2, 2);
             this.theme.Name = "theme";
             this.theme.Size = new System.Drawing.Size(1900, 185);
             this.theme.TabIndex = 0;
@@ -65,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(466, 557);
+            this.label2.Location = new System.Drawing.Point(544, 611);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 40);
             this.label2.TabIndex = 2;
@@ -76,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(466, 433);
+            this.label3.Location = new System.Drawing.Point(544, 487);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 40);
             this.label3.TabIndex = 3;
@@ -85,7 +86,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(798, 433);
+            this.txtUsername.Location = new System.Drawing.Point(876, 487);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(488, 39);
             this.txtUsername.TabIndex = 4;
@@ -93,14 +94,15 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(798, 557);
+            this.txtPassword.Location = new System.Drawing.Point(876, 611);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(488, 39);
             this.txtPassword.TabIndex = 5;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(255)))), ((int)(((byte)(244)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, 182);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
@@ -111,7 +113,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(875, 638);
+            this.button1.Location = new System.Drawing.Point(962, 731);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 65);
             this.button1.TabIndex = 7;

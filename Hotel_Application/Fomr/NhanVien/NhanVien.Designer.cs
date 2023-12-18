@@ -33,11 +33,11 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnDangKyHoaDon = new System.Windows.Forms.Button();
-            this.ThemDichVuVaoHoaDon = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trangChu1 = new Hotel_Application.TrangChu();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             this.taoHoaDon1 = new Hotel_Application.TaoHoaDon();
+            this.thongKe1 = new Hotel_Application.Usercontrol.ThongKe();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(72, 726);
+            this.btnThongKe.Location = new System.Drawing.Point(72, 710);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(180, 98);
             this.btnThongKe.TabIndex = 12;
@@ -73,7 +73,7 @@
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.Location = new System.Drawing.Point(72, 205);
+            this.btnHoaDon.Location = new System.Drawing.Point(72, 246);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnHoaDon.TabIndex = 10;
@@ -83,23 +83,13 @@
             // 
             // btnDangKyHoaDon
             // 
-            this.btnDangKyHoaDon.Location = new System.Drawing.Point(72, 377);
+            this.btnDangKyHoaDon.Location = new System.Drawing.Point(72, 457);
             this.btnDangKyHoaDon.Name = "btnDangKyHoaDon";
             this.btnDangKyHoaDon.Size = new System.Drawing.Size(180, 98);
             this.btnDangKyHoaDon.TabIndex = 14;
             this.btnDangKyHoaDon.Text = "Đăng Ký Hóa Đơn";
             this.btnDangKyHoaDon.UseVisualStyleBackColor = true;
             this.btnDangKyHoaDon.Click += new System.EventHandler(this.btnDangKyHoaDon_Click);
-            // 
-            // ThemDichVuVaoHoaDon
-            // 
-            this.ThemDichVuVaoHoaDon.Location = new System.Drawing.Point(72, 554);
-            this.ThemDichVuVaoHoaDon.Name = "ThemDichVuVaoHoaDon";
-            this.ThemDichVuVaoHoaDon.Size = new System.Drawing.Size(180, 98);
-            this.ThemDichVuVaoHoaDon.TabIndex = 16;
-            this.ThemDichVuVaoHoaDon.Text = "Thêm Dịch Vụ Vào Hóa Đơn";
-            this.ThemDichVuVaoHoaDon.UseVisualStyleBackColor = true;
-            this.ThemDichVuVaoHoaDon.Click += new System.EventHandler(this.ThemDichVuVaoHoaDon_Click);
             // 
             // pictureBox1
             // 
@@ -136,12 +126,20 @@
             this.taoHoaDon1.Size = new System.Drawing.Size(1590, 1027);
             this.taoHoaDon1.TabIndex = 20;
             // 
+            // thongKe1
+            // 
+            this.thongKe1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.thongKe1.Location = new System.Drawing.Point(304, -3);
+            this.thongKe1.Name = "thongKe1";
+            this.thongKe1.Size = new System.Drawing.Size(1590, 1027);
+            this.thongKe1.TabIndex = 21;
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1894, 1020);
-            this.Controls.Add(this.ThemDichVuVaoHoaDon);
+            this.Controls.Add(this.thongKe1);
             this.Controls.Add(this.btnDangKyHoaDon);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
@@ -167,10 +165,10 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnDangKyHoaDon;
-        private System.Windows.Forms.Button ThemDichVuVaoHoaDon;
         private System.Windows.Forms.PictureBox pictureBox1;
         private TrangChu trangChu1;
         private QuanLyHoaDon quanLyHoaDon1;
         private TaoHoaDon taoHoaDon1;
+        private Usercontrol.ThongKe thongKe1;
     }
 }
