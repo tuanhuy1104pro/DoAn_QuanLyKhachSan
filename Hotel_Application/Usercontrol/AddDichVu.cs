@@ -57,11 +57,13 @@ namespace Hotel_Application
                 conn.Open();
                 if (ChucNang.IsAllDigits(txtGiaTien.Text) == false)
                 {
+                    this.DialogResult = DialogResult.Cancel;
                     conn.Close();
                     MessageBox.Show("Giá Tiền Không Hợp Lệ");
                 }
                 else
                 {
+                    this.DialogResult = DialogResult.OK;
                     int maloaidichvu = MaLoaiDV[cboLoaiService.SelectedIndex];
                     SqlCommand cmd = new SqlCommand($"Insert into DichVu(TenDichVu,GiaTien,MaLoaiDichVu) values ('{txtTenDichVu.Text}',{txtGiaTien.Text},{maloaidichvu})", conn);
                     cmd.ExecuteNonQuery();
@@ -73,6 +75,7 @@ namespace Hotel_Application
             }
             catch (Exception)
             {
+                this.DialogResult = DialogResult.Cancel;
                 MessageBox.Show("Đã tồn tại Dịch vụ");
                 conn.Close();
                 

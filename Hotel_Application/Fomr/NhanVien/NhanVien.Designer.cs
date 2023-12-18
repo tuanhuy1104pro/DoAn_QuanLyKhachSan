@@ -141,8 +141,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1894, 1020);
-            this.Controls.Add(this.taoHoaDon1);
-            this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.ThemDichVuVaoHoaDon);
             this.Controls.Add(this.btnDangKyHoaDon);
             this.Controls.Add(this.btnLogOut);
@@ -150,6 +148,8 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.taoHoaDon1);
+            this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.trangChu1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;

@@ -145,10 +145,15 @@ namespace Hotel_Application
                 edit.Show();
                 edit.FormClosing+= delegate
                 {
-                    rowFlag["TenCV"] = edit.txtTenCV.Text;
-                    rowFlag["PhuCap"] = edit.txtPhuCap.Text;
-                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
-                    da.Update(dataSet, "ChucVu");
+                    
+                    if(edit.DialogResult == DialogResult.OK)
+                    {
+                        rowFlag["TenCV"] = edit.txtTenCV.Text;
+                        rowFlag["PhuCap"] = edit.txtPhuCap.Text;
+                        SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                        da.Update(dataSet, "ChucVu");
+                    }
+                   
                 };
         }
         //Chức Vụ//
@@ -196,6 +201,10 @@ namespace Hotel_Application
                         SqlCommand cmd = new SqlCommand($"INSERT INTO  NhanVien VALUES(N'{addns.txtHoTen.Text}',{int.Parse(addns.txtSdt.Text)},'{addns.txtEmail.Text}',N'{addns.cboGioiTinh.SelectedItem.ToString()}','{addns.txtTaiKhoan.Text}','{addns.txtMatKhau.Text}','{addns.dtDoBorn.Text}','{addns.DtNgayVaoLam.Text}',{int.Parse(addns.txtMaChucVu.Text)})", conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show($"Đã thêm nhân viên");
+                        conn.Close();
+                    }
+                    else
+                    {
                         conn.Close();
                     }
                     

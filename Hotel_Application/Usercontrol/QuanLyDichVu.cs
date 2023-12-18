@@ -58,6 +58,7 @@ namespace Hotel_Application.Usercontrol
             addDichVu.FormClosed += delegate
             {
                 LoaddatagridDichVu();
+                if(addDichVu.DialogResult == DialogResult.OK)
                 cboService.Items.Add(addDichVu.txtTenDichVu.Text);
             };
             addDichVu.Show();
@@ -77,6 +78,7 @@ namespace Hotel_Application.Usercontrol
                 SqlCommandBuilder cb = new SqlCommandBuilder(daDV);
                 daDV.Update(dsDichVu, "DichVu");
                 SoluongdongDichVu--;
+                cboService.Items.Remove(tendichvu);
                 MessageBox.Show($"Đã xóa dịch vụ {tendichvu}");
             }
             catch (Exception)

@@ -54,8 +54,14 @@ namespace Hotel_Application
             MaPhong.Clear();
             conn.Open();
             daPhong = new SqlDataAdapter($"select * from Phong where ((Phong.MaLoaiPhong = {IMaLoaiPhong}) and (Phong.MaPhong not in (Select MaPhong from HoaDon))) or ((Phong.MaLoaiPhong = {IMaLoaiPhong}) and (Select  HoaDon.NgayTra from HoaDon where Phong.MaPhong = HoaDon.MaPhong and HoaDon.NgayTra <= '{NgayThue.Text}') <= '{NgayThue.Text}')", conn);
-           
-           
+           if(daPhong == null)
+            {
+                cboPhong.Items.Add("Null");
+                MaPhong.Add(0);
+                conn.Close();
+            }
+            else
+            {
                 daPhong.Fill(dsPhong, "Phong");
                 conn.Close();
 
@@ -64,8 +70,7 @@ namespace Hotel_Application
                     cboPhong.Items.Add(item["TenPhong"].ToString());
                     MaPhong.Add(int.Parse(item["MaPhong"].ToString()));
                 }
-            
-            
+            }  
         }
         int IMaLoaiPhong;
         private void cboLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,6 +109,29 @@ namespace Hotel_Application
                 SqlCommand cmdHoaDon = new SqlCommand($"insert into HoaDon(NgayThue,NgayTra,MaNV,MaKhachHang,MaPhong) values ('{NgayThue.Text}','{NgayTra.Text}',{DangKyDangNhap.DoiTuongNV.MaNV},{MaKH},{IMaPhong})", conn);
                 cmdHoaDon.ExecuteNonQuery();
                 MessageBox.Show("Da them thanh cong");
+                conn.Close();
+            }
+            else
+            {
+                readerKH.Close();
+                //ThemKhachHang
+                cmdKH = new SqlCommand($"Insert into KhachHang(HoTen,SoDienThoai,Email) values (N'{txtHoTen.Text}','{txtSdt.Text}','{txtEmail.Text}')",conn);
+                cmdKH.ExecuteNonQuery();
+                //ThemKhachHang
+
+                //TimMaKhachHang
+                cmdKH = new SqlCommand($"Select *From KhachHang where KhachHang.SoDienThoai = {txtSdt.Text} or KhachHang.Email = '{txtEmail.Text}'  ", conn);
+                SqlDataReader rKH = cmdKH.ExecuteReader();
+                rKH.Read();
+                int iMaKhachHang = int.Parse(rKH["MaKhachHang"].ToString());
+                rKH.Close() ;
+                //
+                //Them vao hoa don
+                SqlCommand cmdHoaDon = new SqlCommand($"insert into HoaDon(NgayThue,NgayTra,MaNV,MaKhachHang,MaPhong) values ('{NgayThue.Text}','{NgayTra.Text}',{DangKyDangNhap.DoiTuongNV.MaNV},{iMaKhachHang},{IMaPhong})", conn);
+                cmdHoaDon.ExecuteNonQuery();
+                MessageBox.Show("Da them thanh cong");
+
+                //
                 conn.Close();
             }
 

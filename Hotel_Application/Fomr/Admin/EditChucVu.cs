@@ -40,13 +40,15 @@ namespace Hotel_Application
             SqlDataReader reader = cmd.ExecuteReader();
             bool check = reader.Read();
             reader.Close();
-            if (check == false)
+            if (check == false || txtTenCV.Text == NhanSu.rowFlag["TenCV"].ToString())
             {
+                this.DialogResult = DialogResult.OK;
                 conn.Close();
                 this.Close();
             }
             else
             {
+                this.DialogResult = DialogResult.Cancel;
                 MessageBox.Show("Đã tồn tại chức vụ: " + txtTenCV.Text);
             }
            

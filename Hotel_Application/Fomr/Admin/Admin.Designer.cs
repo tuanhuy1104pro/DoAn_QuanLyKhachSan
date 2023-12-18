@@ -100,7 +100,6 @@
             this.btnThongKe.TabIndex = 7;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
-            
             // 
             // btnLogOut
             // 
@@ -167,10 +166,10 @@
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnRoom);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.phong1);
             this.Controls.Add(this.nhanSu1);
             this.Controls.Add(this.quanLyHoaDon1);
             this.Controls.Add(this.quanLyDichVu1);
-            this.Controls.Add(this.phong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Admin";
