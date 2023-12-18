@@ -216,5 +216,19 @@ namespace Hotel_Application
             daPhong.Update(dsPhong, "Phong");
             SoluongdongPhong--;
         }
+        public static DataRow rowFlagPhong;
+        private void btnSuaPhong_Click(object sender, EventArgs e)
+        {
+            rowFlagPhong = dsPhong.Tables["Phong"].Rows.Find(maPhong);
+            EditPhong edit = new EditPhong();
+            edit.Show();
+            edit.FormClosing += delegate
+            {
+                rowFlag["TenPhong"] = edit.txtTenPhong.Text;
+                rowFlag["MaLoaiPhong"] = edit.txtLoaiPhong.Text;
+                SqlCommandBuilder cb = new SqlCommandBuilder(daPhong);
+                daPhong.Update(dsPhong, "Phong");
+            };
+        }
     }
 }

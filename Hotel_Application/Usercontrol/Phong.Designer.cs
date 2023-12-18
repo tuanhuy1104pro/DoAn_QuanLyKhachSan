@@ -160,6 +160,7 @@
             this.btnSuaPhong.TabIndex = 19;
             this.btnSuaPhong.Text = "Sửa";
             this.btnSuaPhong.UseVisualStyleBackColor = true;
+            this.btnSuaPhong.Click += new System.EventHandler(this.btnSuaPhong_Click);
             // 
             // btnXoaPhong
             // 
