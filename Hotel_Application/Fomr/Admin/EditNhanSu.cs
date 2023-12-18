@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Hotel_Application.Features;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ namespace Hotel_Application
     public partial class EditNhanSu : Form
     {
         DataRow rowFlag = NhanSu.rowFlagNhanVien;
+        SqlConnection conn = ConnectDB.connectstring;
         public EditNhanSu()
         {
             InitializeComponent();
@@ -35,7 +38,24 @@ namespace Hotel_Application
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            this.Close();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand($"Select * from ChucVu where MaCV = {txtMaChucVu.Text} ", conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            bool check = dr.Read();
+            dr.Close();
+            if (check) { 
+                conn.Close();
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else {
+                conn.Close();
+                DialogResult = DialogResult.Cancel;
+                MessageBox.Show("Không tồn tại chức vụ");
+
+            }
+           
+          
         }
     }
 }

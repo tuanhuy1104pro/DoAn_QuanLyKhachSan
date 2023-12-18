@@ -249,17 +249,21 @@ namespace Hotel_Application
             edit.Show();
             edit.FormClosing += delegate
             {
-                rowFlagNhanVien["TenNV"] = edit.txtHoTen.Text;
-                rowFlagNhanVien["SDT"] = int.Parse(edit.txtSdt.Text);
-                rowFlagNhanVien["EmailNV"] = edit.txtEmail.Text;
-                rowFlagNhanVien["GioiTinh"] = edit.cboGioiTinh.SelectedItem.ToString();
-                rowFlagNhanVien["TaiKhoan"] = edit.txtTaiKhoan.Text;
-                rowFlagNhanVien["MatKhau"] = edit.txtMatKhau.Text;
-                rowFlagNhanVien["NgaySinh"] = Convert.ToDateTime(edit.dtDoBorn.Text);
-                rowFlagNhanVien["NgayVaoLam"] = Convert.ToDateTime(edit.DtNgayVaoLam.Text);
-                rowFlagNhanVien["MaCV"] = int.Parse(edit.txtMaChucVu.Text);
-                SqlCommandBuilder cb = new SqlCommandBuilder(daNhanVien);
-                daNhanVien.Update(dsNhanvien, "NhanVien");
+                if(edit.DialogResult == DialogResult.OK)
+                {
+                    rowFlagNhanVien["TenNV"] = edit.txtHoTen.Text;
+                    rowFlagNhanVien["SDT"] = int.Parse(edit.txtSdt.Text);
+                    rowFlagNhanVien["EmailNV"] = edit.txtEmail.Text;
+                    rowFlagNhanVien["GioiTinh"] = edit.cboGioiTinh.SelectedItem.ToString();
+                    rowFlagNhanVien["TaiKhoan"] = edit.txtTaiKhoan.Text;
+                    rowFlagNhanVien["MatKhau"] = edit.txtMatKhau.Text;
+                    rowFlagNhanVien["NgaySinh"] = Convert.ToDateTime(edit.dtDoBorn.Text);
+                    rowFlagNhanVien["NgayVaoLam"] = Convert.ToDateTime(edit.DtNgayVaoLam.Text);
+                    rowFlagNhanVien["MaCV"] = int.Parse(edit.txtMaChucVu.Text);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(daNhanVien);
+                    daNhanVien.Update(dsNhanvien, "NhanVien");
+                }    
+               
             };
         }
 
