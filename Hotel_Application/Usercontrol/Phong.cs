@@ -224,10 +224,14 @@ namespace Hotel_Application
             edit.Show();
             edit.FormClosing += delegate
             {
-                rowFlag["TenPhong"] = edit.txtTenPhong.Text;
-                rowFlag["MaLoaiPhong"] = edit.txtLoaiPhong.Text;
-                SqlCommandBuilder cb = new SqlCommandBuilder(daPhong);
-                daPhong.Update(dsPhong, "Phong");
+                if(edit.DialogResult == DialogResult.OK)
+                {
+                    rowFlagPhong["TenPhong"] = edit.txtTenPhong.Text;
+                    rowFlagPhong["MaLoaiPhong"] = edit.txtLoaiPhong.Text;
+                    SqlCommandBuilder cb = new SqlCommandBuilder(daPhong);
+                    daPhong.Update(dsPhong, "Phong");
+                }
+                
             };
         }
 

@@ -39,13 +39,16 @@ namespace Hotel_Application.Fomr.Admin
             SqlDataReader reader = cmd.ExecuteReader();
             bool check = reader.Read();
             reader.Close();
-            if (check == false)
+            if (check == false || txtTenPhong.Text == Phong.rowFlagPhong["TenPhong"].ToString())
             {
+                this.DialogResult = DialogResult.OK;
                 conn.Close();
                 this.Close();
             }
             else
             {
+                this.DialogResult = DialogResult.Cancel;
+                conn.Close();
                 MessageBox.Show("Đã tồn tại phòng: " + txtTenPhong.Text);
             }
         }
