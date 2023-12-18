@@ -36,10 +36,11 @@
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnTK = new System.Windows.Forms.Button();
+            this.phong1 = new Hotel_Application.Phong();
             this.nhanSu1 = new Hotel_Application.NhanSu();
             this.quanLyHoaDon1 = new Hotel_Application.QuanLyHoaDon();
             this.quanLyDichVu1 = new Hotel_Application.Usercontrol.QuanLyDichVu();
-            this.phong1 = new Hotel_Application.Phong();
+            this.thongKe1 = new Hotel_Application.Usercontrol.ThongKe();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,6 +122,14 @@
             this.btnTK.UseVisualStyleBackColor = true;
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
+            // phong1
+            // 
+            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.phong1.Location = new System.Drawing.Point(327, -6);
+            this.phong1.Name = "phong1";
+            this.phong1.Size = new System.Drawing.Size(1590, 1080);
+            this.phong1.TabIndex = 12;
+            // 
             // nhanSu1
             // 
             this.nhanSu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -145,19 +154,20 @@
             this.quanLyDichVu1.Size = new System.Drawing.Size(1590, 1080);
             this.quanLyDichVu1.TabIndex = 13;
             // 
-            // phong1
+            // thongKe1
             // 
-            this.phong1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.phong1.Location = new System.Drawing.Point(327, -6);
-            this.phong1.Name = "phong1";
-            this.phong1.Size = new System.Drawing.Size(1590, 1080);
-            this.phong1.TabIndex = 12;
+            this.thongKe1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.thongKe1.Location = new System.Drawing.Point(328, -5);
+            this.thongKe1.Name = "thongKe1";
+            this.thongKe1.Size = new System.Drawing.Size(1590, 1079);
+            this.thongKe1.TabIndex = 15;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1918, 1064);
+            this.Controls.Add(this.thongKe1);
             this.Controls.Add(this.btnTK);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnThongKe);
@@ -193,5 +203,6 @@
         private Phong phong1;
         private Usercontrol.QuanLyDichVu quanLyDichVu1;
         private System.Windows.Forms.Button btnTK;
+        private Usercontrol.ThongKe thongKe1;
     }
 }

@@ -125,6 +125,11 @@ namespace Hotel_Application
 
             btnTK.BackColor = Color.Gray;
             btnTK.ForeColor = Color.White;
+
+            //
+            thongKe1.Show();
+            thongKe1.BringToFront();
+            //
         }
     }
 }

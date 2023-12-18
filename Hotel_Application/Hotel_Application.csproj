@@ -130,6 +130,12 @@
     <Compile Include="Usercontrol\QuanLyDichVu.Designer.cs">
       <DependentUpon>QuanLyDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrol\ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\ThongKe.designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrol\TrangChu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\QuanLyDichVu.resx">
       <DependentUpon>QuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
