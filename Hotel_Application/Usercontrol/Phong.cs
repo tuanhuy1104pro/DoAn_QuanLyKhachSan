@@ -166,11 +166,13 @@ namespace Hotel_Application
             {
                 conn.Open();
             }
-
+            //Kiểm tra phòng đã tồn tại chưa
             SqlCommand cmd = new SqlCommand($"Select MaPhong from Phong Where TenPhong = N'{txtTenPhong.Text}'", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             bool check = reader.Read();
             reader.Close();
+            //
+            
             if (txtTenPhong.Text.Length == 0 || txtLoaiPhong.Text.Length == 0)
             {
                 conn.Close();
@@ -183,7 +185,13 @@ namespace Hotel_Application
             }
             else
             {
-                if (check == false)
+                //Kiểm tra mã loại phòng có tồn tại
+                SqlCommand cmd2 = new SqlCommand($"Select * from LoaiPhong Where MaLoaiPhong = {txtLoaiPhong.Text}", conn);
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+                bool check2 = reader2.Read();
+                reader2.Close();
+                //
+                if (check == false && check2 == true)
                 {
                     cmd = new SqlCommand($"insert into Phong(TenPhong,MaLoaiPhong) values (N'{txtTenPhong.Text}','{int.Parse(txtLoaiPhong.Text)}')", conn);
                     cmd.ExecuteNonQuery();
@@ -199,7 +207,7 @@ namespace Hotel_Application
                 else
                 {
                     conn.Close();
-                    MessageBox.Show($"Đã Tồn Tại phòng {txtTenPhong.Text}");
+                    MessageBox.Show($"Lỗi {txtTenPhong.Text}");
                 }
             }
         }
