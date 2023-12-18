@@ -58,10 +58,10 @@
     <Compile Include="Fomr\Admin\EditPhong.designer.cs">
       <DependentUpon>EditPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaoHoaDon.cs">
+    <Compile Include="Fomr\NhanVien\TaoHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TaoHoaDon.Designer.cs">
+    <Compile Include="Fomr\NhanVien\TaoHoaDon.Designer.cs">
       <DependentUpon>TaoHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\AddDichVu.cs">
@@ -162,7 +162,7 @@
     <EmbeddedResource Include="Fomr\Admin\EditPhong.resx">
       <DependentUpon>EditPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaoHoaDon.resx">
+    <EmbeddedResource Include="Fomr\NhanVien\TaoHoaDon.resx">
       <DependentUpon>TaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\AddDichVu.resx">

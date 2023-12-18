@@ -43,7 +43,7 @@
             // 
             // theme
             // 
-            this.theme.BackColor = System.Drawing.Color.White;
+            this.theme.BackColor = System.Drawing.Color.LightGray;
             this.theme.Location = new System.Drawing.Point(-2, 2);
             this.theme.Name = "theme";
             this.theme.Size = new System.Drawing.Size(1900, 185);
@@ -103,9 +103,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 182);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
