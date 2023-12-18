@@ -39,7 +39,12 @@ namespace Hotel_Application.Fomr.Admin
             SqlDataReader reader = cmd.ExecuteReader();
             bool check = reader.Read();
             reader.Close();
-            if (check == false || txtTenPhong.Text == Phong.rowFlagPhong["TenPhong"].ToString())
+            
+            SqlCommand cmd2 = new SqlCommand($"Select * from LoaiPhong where MaLoaiPhong = {txtLoaiPhong.Text} ", conn);
+            SqlDataReader dr = cmd2.ExecuteReader();
+            bool check2 = dr.Read();
+            dr.Close();
+            if ((check == false  || txtTenPhong.Text == Phong.rowFlagPhong["TenPhong"].ToString()) && check2 == true)
             {
                 this.DialogResult = DialogResult.OK;
                 conn.Close();
@@ -49,7 +54,7 @@ namespace Hotel_Application.Fomr.Admin
             {
                 this.DialogResult = DialogResult.Cancel;
                 conn.Close();
-                MessageBox.Show("Đã tồn tại phòng: " + txtTenPhong.Text);
+                MessageBox.Show("Lỗi: " + txtTenPhong.Text);
             }
         }
     }
