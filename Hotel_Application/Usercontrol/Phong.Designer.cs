@@ -47,7 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.btnAddPhong = new System.Windows.Forms.Button();
-            this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.txtLoaiPhong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.btnAddKindRoom.TabIndex = 0;
             this.btnAddKindRoom.Text = "Thêm";
             this.btnAddKindRoom.UseVisualStyleBackColor = true;
+            this.btnAddKindRoom.Click += new System.EventHandler(this.btnAddKindRoom_Click);
             // 
             // txtTenLoaiPhong
             // 
@@ -107,6 +108,7 @@
             this.dgvLoaiPhong.RowTemplate.Height = 28;
             this.dgvLoaiPhong.Size = new System.Drawing.Size(800, 318);
             this.dgvLoaiPhong.TabIndex = 6;
+            this.dgvLoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiPhong_CellClick);
             // 
             // label3
             // 
@@ -136,6 +138,7 @@
             this.btnXoaLoaiPhong.TabIndex = 9;
             this.btnXoaLoaiPhong.Text = "Xóa";
             this.btnXoaLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnXoaLoaiPhong.Click += new System.EventHandler(this.btnXoaLoaiPhong_Click);
             // 
             // btnSuaLoaiPhong
             // 
@@ -146,6 +149,7 @@
             this.btnSuaLoaiPhong.TabIndex = 10;
             this.btnSuaLoaiPhong.Text = "Sửa";
             this.btnSuaLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnSuaLoaiPhong.Click += new System.EventHandler(this.btnSuaLoaiPhong_Click);
             // 
             // btnSuaPhong
             // 
@@ -166,6 +170,7 @@
             this.btnXoaPhong.TabIndex = 18;
             this.btnXoaPhong.Text = "Xóa";
             this.btnXoaPhong.UseVisualStyleBackColor = true;
+            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
             // 
             // label4
             // 
@@ -227,22 +232,22 @@
             this.btnAddPhong.TabIndex = 11;
             this.btnAddPhong.Text = "Thêm";
             this.btnAddPhong.UseVisualStyleBackColor = true;
+            this.btnAddPhong.Click += new System.EventHandler(this.btnAddPhong_Click);
             // 
-            // cboLoaiPhong
+            // txtLoaiPhong
             // 
-            this.cboLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLoaiPhong.FormattingEnabled = true;
-            this.cboLoaiPhong.Location = new System.Drawing.Point(183, 652);
-            this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(451, 33);
-            this.cboLoaiPhong.TabIndex = 20;
+            this.txtLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoaiPhong.Location = new System.Drawing.Point(185, 652);
+            this.txtLoaiPhong.Name = "txtLoaiPhong";
+            this.txtLoaiPhong.Size = new System.Drawing.Size(465, 30);
+            this.txtLoaiPhong.TabIndex = 21;
             // 
             // Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.cboLoaiPhong);
+            this.Controls.Add(this.txtLoaiPhong);
             this.Controls.Add(this.btnSuaPhong);
             this.Controls.Add(this.btnXoaPhong);
             this.Controls.Add(this.label4);
@@ -262,6 +267,7 @@
             this.Controls.Add(this.btnAddKindRoom);
             this.Name = "Phong";
             this.Size = new System.Drawing.Size(1590, 1080);
+            this.Load += new System.EventHandler(this.Phong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.ResumeLayout(false);
@@ -289,6 +295,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.Button btnAddPhong;
-        private System.Windows.Forms.ComboBox cboLoaiPhong;
+        private System.Windows.Forms.TextBox txtLoaiPhong;
     }
 }

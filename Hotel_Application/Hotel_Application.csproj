@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fomr\Admin\EditLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\Admin\EditLoaiPhong.designer.cs">
+      <DependentUpon>EditLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomr\Admin\EditPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomr\Admin\EditPhong.designer.cs">
+      <DependentUpon>EditPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaoHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +150,12 @@
     <Compile Include="Fomr\ĐangKyDangNhap\QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fomr\Admin\EditLoaiPhong.resx">
+      <DependentUpon>EditLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomr\Admin\EditPhong.resx">
+      <DependentUpon>EditPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaoHoaDon.resx">
       <DependentUpon>TaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
