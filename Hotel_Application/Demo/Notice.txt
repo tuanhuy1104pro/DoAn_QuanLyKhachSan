@@ -1,0 +1,1 @@
+﻿Usercontrol ThongKe And QuanLyHoaDon are the same with Admin (Both target can access thee)
