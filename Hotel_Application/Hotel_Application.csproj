@@ -231,8 +231,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Demo\addChiTietGoi.png" />
     <Content Include="Demo\addChucVu.png" />
     <Content Include="Demo\addChucVuFailedExisted.png" />
+    <Content Include="Demo\addDichVu_AndFailedIfCostNotANumberOrExisted.png" />
+    <Content Include="Demo\addGoi_ConstrainIsTheSameAsDichVu_BothDichVuAndGoiWillAppearAtComboboxWhenAdminAdd.png" />
     <Content Include="Demo\addLoaiPhong.png" />
     <Content Include="Demo\addLoaiPhongFailed_NotInterger.png" />
     <Content Include="Demo\addNhanSu_1.png" />
@@ -240,12 +243,16 @@
     <Content Include="Demo\addNhanSu_3.png" />
     <Content Include="Demo\addPhongSuccess_AndFailedIfOneOfTextBoxAreEmpty.png" />
     <Content Include="Demo\AdminDashboard.png" />
+    <Content Include="Demo\deleteChiTietGoi.png" />
     <Content Include="Demo\deleteChucVu.png" />
+    <Content Include="Demo\deleteDichVu.png" />
+    <Content Include="Demo\deleteGoi_ByChooseGoiCombobox_NotNecessaryToFillTextBox.png" />
     <Content Include="Demo\deleteLoaiPhong_Test2.png" />
     <Content Include="Demo\deleteNhanSu_TranVanA.png" />
     <Content Include="Demo\deletePhong_Test2_AndEditedIsTheSameAsLoaiPhong.png" />
     <Content Include="Demo\editChucVu.png" />
     <Content Include="Demo\editChucVuFailedExisted.png" />
+    <Content Include="Demo\editedTestGoi_ChooseGoiComboboxAndFillATextBoxThenCickSua.png" />
     <Content Include="Demo\editLoaiPhongFailed_TestToVIP_ExistedVIP.png" />
     <Content Include="Demo\editLoaiPhong_TestToTest2_Success.png" />
     <Content Include="Demo\editNhanSu_TranVanA_GenderChanged.png" />
