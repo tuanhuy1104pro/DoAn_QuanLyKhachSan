@@ -1,4 +1,5 @@
-﻿create database QLKS
+﻿use master
+create database QLKS
 use QLKS
 go 
 --Nhân Viên - Lương - Chức Vụ
@@ -170,27 +171,27 @@ INSERT INTO ChucVu VALUES (N'Nhân viên',2.5),
 						(N'Lao công',2.0)
 SELECT * FROM ChucVu
 
-DBCC CHECKIDENT('NhanVien', RESEED, 0)
+DBCC CHECKIDENT('NhanVien', RESEED, 1)
 set dateformat dmy
-INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa',11/4/2003,10/10/2023,1),
-					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123',5/3/1999,10/10/2023,1),
-					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123',5/3/1999,10/10/2015,2),
-					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123',5/3/1999,10/10/2000,3)
+INSERT INTO  NhanVien VALUES(N'Nguyễn Trần Tuấn Huy',0816243565,'Huy@gmail.com','Nam','Admin','sa','11/4/2003','10/10/2023',1),
+					(N'Nguyễn Văn An',0816243567,'An@gmail.com','Nam','An123','An123','5/3/1999','10/10/2023',1),
+					  (N'Nguyễn Thành Lợi',0819062568,'Loi@gmail.com','Nam','Loi123','Loi123','5/3/1999','10/10/2015',2),
+					   (N'Lê Thị Bích',0866223569,'Bich@gmail.com',N'Nữ','Bich123','Bich123','5/3/1999','10/10/2000',3)
 
 SELECT * FROM NhanVien
 
 
-
-INSERT INTO Luong VALUES (5,10000000,1),
+DBCC CHECKIDENT('Luong', RESEED, 0)
+INSERT INTO Luong VALUES (5,10000000,4),
 						(4,15000000,2),
 						(null,5000000,3)
 SELECT * FROM Luong
 
 DBCC CHECKIDENT('HoaDon', RESEED, 0)
 SET DATEFORMAT DMY
-INSERT INTO HoaDon (NgayThue,NgayTra,TongTien,MaKhachHang,MaNV,MaPhong) VALUES (19/11/2023,23/11/2023,450,1,1,2),
+INSERT INTO HoaDon (NgayThue,NgayTra,TongTien,MaKhachHang,MaNV,MaPhong) VALUES (19/11/2023,23/11/2023,450,1,2,2),
 													(20/11/2023,24/11/2023,500,2,2,1),
-													(21/11/2023,26/11/2023,600,3,3,2)
+													(24/11/2023,26/11/2023,600,3,3,2)
 SELECT * FROM HoaDon
 DELETE from HoaDon
 

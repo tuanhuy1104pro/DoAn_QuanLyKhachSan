@@ -231,6 +231,30 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Demo\addChucVu.png" />
+    <Content Include="Demo\addChucVuFailedExisted.png" />
+    <Content Include="Demo\addLoaiPhong.png" />
+    <Content Include="Demo\addLoaiPhongFailed_NotInterger.png" />
+    <Content Include="Demo\addNhanSu_1.png" />
+    <Content Include="Demo\addNhanSu_2.png" />
+    <Content Include="Demo\addNhanSu_3.png" />
+    <Content Include="Demo\addPhongSuccess_AndFailedIfOneOfTextBoxAreEmpty.png" />
+    <Content Include="Demo\AdminDashboard.png" />
+    <Content Include="Demo\deleteChucVu.png" />
+    <Content Include="Demo\deleteLoaiPhong_Test2.png" />
+    <Content Include="Demo\deleteNhanSu_TranVanA.png" />
+    <Content Include="Demo\deletePhong_Test2_AndEditedIsTheSameAsLoaiPhong.png" />
+    <Content Include="Demo\editChucVu.png" />
+    <Content Include="Demo\editChucVuFailedExisted.png" />
+    <Content Include="Demo\editLoaiPhongFailed_TestToVIP_ExistedVIP.png" />
+    <Content Include="Demo\editLoaiPhong_TestToTest2_Success.png" />
+    <Content Include="Demo\editNhanSu_TranVanA_GenderChanged.png" />
+    <Content Include="Demo\LoginFaileWhenEmpty.png" />
+    <Content Include="Demo\NhanVienDashBoard.png" />
+    <Content Include="Demo\QuanLyDichVu.png" />
+    <Content Include="Demo\searchNhanSu.png" />
+    <Content Include="Demo\ThongKe.png" />
+    <Content Include="Demo\WrongUsernameOrPassword.png" />
     <Content Include="QuanTriKhachSan.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
